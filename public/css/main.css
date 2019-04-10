@@ -7,19 +7,18 @@ body{
 }
 
 form#mainform{
-    
     width: 560px;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    margin-top: 57px;
+    margin-top: 27px;
 }
 
 h2#createacc{
     font-size: 35px;
     font-family: 'PT Serif', serif;
     font-weight: 500;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 #next{
@@ -64,6 +63,25 @@ h2#createacc{
     border-bottom: 2px solid white;
 }
 
+button#eauth{
+    font-family: 'Acme', sans-serif;
+    width: 330px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 215, 0, 0);
+    border-color: white;
+    border-width: 1px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
 button#next, button#submit{
     font-family: 'Acme', sans-serif;
     width: 250px;
@@ -82,7 +100,7 @@ button#next, button#submit{
     -o-transition: all 0.30s ease-in-out;
 }
 
-button#next:hover, button#submit:hover{
+button#next:hover, button#submit:hover, button#eauth:hover{
     background-color: white;
     color: black;
     border-color: white;
@@ -94,7 +112,7 @@ button#next:hover, button#submit:hover{
     -o-transition: all 0.30s ease-in-out;
 }
 
-button#next:focus, button#submit:focus{
+button#next:focus, button#submit:focus, button#eauth:focus{
     outline: 0;
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);

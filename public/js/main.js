@@ -72,11 +72,9 @@ function addgenre() {
 function enabler() {
     var i = 1;
     var check = document.getElementById("regoption");
-    console.log(check);
     if (check.checked) {
         for (i = 1; i <= 5; i++) {
             var subele = document.getElementById(i.toString());
-            console.log(i.toString());
             subele.disabled = false;
         }
     }
@@ -91,11 +89,9 @@ function enabler() {
 function enabler1() {
     var i = 1;
     var check = document.getElementById("intoption");
-    console.log(check);
     if (check.checked) {
         for (i = 1; i <= 5; i++) {
             var subele = document.getElementById("lang" + i.toString());
-            console.log(i.toString());
             subele.disabled = false;
         }
     }
@@ -145,7 +141,6 @@ document.getElementById("mainform").onkeypress = function (e) {
 
 $("#genre").on("keyup", () => {
     var search = $("#genre").val();
-    console.log(search);
     $.ajax({
             url: "/tag",
             method: 'GET',

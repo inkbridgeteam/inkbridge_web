@@ -33,7 +33,6 @@ app.get("/readersignup", (req, res) => {
     res.render("rsignup");
 });
 
-
 app.get("/login", (req, res) => {
     res.render("Login");
 });
@@ -62,7 +61,9 @@ app.get("/profile", (req, res) => {
     res.render("profile");
 });
 
-
+app.get("/eauth", function(req, res){
+    res.render("emailauth");
+});
 
 app.get("/tag", (req, res) => {
     if (req.query.search) {
@@ -83,5 +84,5 @@ app.get("/tag", (req, res) => {
 });
 
 app.listen(3000, function () {
-    console.log("runnninng");
+    console.log("running");
 });

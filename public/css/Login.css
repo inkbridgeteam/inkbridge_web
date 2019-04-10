@@ -15,23 +15,26 @@ body{
 color: white;
 opacity: 0.6; /* Firefox */
 font-family: 'Acme', sans-serif;
+text-align: left;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
 color: white;
 font-family: 'Acme', sans-serif;
+text-align: left;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
 color: white;
 font-family: 'Acme', sans-serif;
+text-align: left;
 }
 
 h1{
     font-size: 35px;
     font-family: 'PT Serif', serif;
     font-weight: 500;
-    margin-top: 105px;
+    margin-top: 40px;
 }
 
 .theinput{
@@ -39,13 +42,13 @@ h1{
     outline: 0;
     background: transparent;
     border-bottom: 1px solid white;
-    width: 177px;
+    width: 270px;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     color: white;
-    text-align: center;
+    text-align: left;
     font-family: 'Acme', sans-serif;
 }
 
@@ -67,7 +70,7 @@ form{
     padding-top: 0.1px;
 }
 
-button{
+button#submit{
     font-family: 'Acme', sans-serif;
     width: 250px;
     height: 50px;
@@ -85,7 +88,7 @@ button{
     -o-transition: all 0.30s ease-in-out;
 }
 
-button:hover{
+button#submit:hover{
     background-color: white;
     color: black;
     border-color: white;
@@ -97,7 +100,44 @@ button:hover{
     -o-transition: all 0.30s ease-in-out;
 }
 
-button:focus{
+button#submit:focus{
+    outline: 0;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+button#eauth{
+    font-family: 'Acme', sans-serif;
+    width: 270px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 215, 0, 0);
+    border-color: white;
+    border-width: 1px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+button#eauth:hover{
+    background-color: white;
+    color: black;
+    border-color: white;
+    border-width: 1px;
+    cursor: pointer;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+button#eauth:focus, button#submit:focus{
     outline: 0;
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);

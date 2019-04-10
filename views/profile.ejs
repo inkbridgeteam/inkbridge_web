@@ -9,10 +9,12 @@
   <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/css/profile.css">
   <link href="https://fonts.googleapis.com/css?family=Amarante" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
-<body >
+<body>
   <section class="prof_page">
 
   <!-- Profile Starts -->
@@ -20,16 +22,17 @@
       <div class="col-2">
         <img src="/Images/cardicon.png" id="prof_img">
       </div>
-      <div class="col-6" id="prof_stat">
-        <h1 id="usr_name">raiedkhan</h1>
+      <div class="col-9" id="prof_stat">
+        <h1 style="font-family: 'Raleway', sans-serif;" id="usr_name">raiedkhan</h1>
         <div id="top">
-          <span id="flws"><span id="usr_flws">999 </span>Followers</span>
-          <span id="flwng"><span id="usr_flwng">999 </span>Following</span>
-          <span id="artc"><span id="usr_artc">100 </span>Articles</span><br>
+          <span style="font-family: 'Raleway', sans-serif;" id="flws"><span id="usr_flws">142 </span>Followers</span>
+          <span style="font-family: 'Raleway', sans-serif;" id="flwng"><span id="usr_flwng">17 </span>Following</span>
+          <span style="font-family: 'Raleway', sans-serif;" id="artc"><span id="usr_artc">150 </span>Articles</span><br>
         </div>
         <div id="bottom">
-          <span id="pens" style="background-color: rgba(0, 0, 0, 0.452); padding: 0.8vw; border-radius: 22px; color: rgb(219, 219, 219);"><span id="usr_pens">100 </span><img class="img-fluid" style="width: 4vw;" src="/Images/pen.png"></span>
-          <span id="quils" style="background-color: rgba(0, 0, 0, 0.452); padding: 0.8vw; border-radius: 22px; color: rgb(219, 219, 219);"><span id="usr_quils">100 </span><img class="img-fluid" style="width: 4vw;" src="/Images/Quill.png"></span>
+          <span id="pens" style="background-color: rgba(0, 0, 0, 0.452); padding: 0.8vw; border-radius: 22px; color: rgb(219, 219, 219);"><span style="font-family: 'Raleway', sans-serif;" id="usr_pens">87 </span><img class="img-fluid" style="width: 4vw;" src="/Images/pen.png"></span>
+          <span id="quils" style="background-color: rgba(0, 0, 0, 0.452); padding: 0.8vw; border-radius: 22px; color: rgb(219, 219, 219);"><span style="font-family: 'Raleway', sans-serif;" id="usr_quils">51 </span><img class="img-fluid" style="width: 4vw;" src="/Images/Quill.png"></span>
+          <button id="followbutton"><i class="fas fa-user-plus"></i><i style="display: none;" class="fas fa-user-check"></i>&nbsp;&nbsp;Follow</button>
         </div>
       </div>
     </div>
@@ -38,9 +41,9 @@
   <!-- Options Starts -->  
     
     <div class="row" id="tabs">
-      <div class="col text-center"><a class="btn-floating btn-lg" id="news_btn" onclick="Switch(1,this.id);">NEWS-FEED</a></div>  
-      <div class="col text-center" style="padding-right: 0px;padding-left: 0px;"><a class="btn-floating btn-lg" id="post_btn" onclick="Switch(2,this.id);">POSTS</a></div>
-      <div class="col text-center"><a class="btn-floating btn-lg" id="draft_btn" onclick="Switch(3,this.id);">DRAFTS <i class="fas fa-pen-square"></i></a></div>  
+      <div class="col text-center"><a style="font-family: 'Acme', sans-serif;" class="btn-floating btn-lg" id="news_btn" onclick="Switch(1,this.id);">NEWS-FEED</a></div>  
+      <div class="col text-center" style="padding-right: 0px;padding-left: 0px;"><a class="btn-floating btn-lg" style="font-family: 'Acme', sans-serif;" id="post_btn" onclick="Switch(2,this.id);">POSTS</a></div>
+      <div class="col text-center"><a class="btn-floating btn-lg" id="draft_btn" style="font-family: 'Acme', sans-serif;" onclick="Switch(3,this.id);">DRAFTS <i class="fas fa-pen-square"></i></a></div>  
     </div>
 
   <!-- Options Ends -->

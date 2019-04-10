@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ink Bridge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
     <link rel="icon" href="/Images/logo.png">
     <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://geodata.solutions/includes/countrystatecity.js"></script>
@@ -66,107 +66,134 @@
                 <form class="mx-auto col-12" method="post" onsubmit="return check();" id="mainform">
                     <center>
                         <h2 id="createacc">Create an Account</h2>
+                        <button class="mb-3" onclick="location.href='/eauth'" id="eauth"><i id="mailicon"
+                                class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;Signup with e-mail</button><br>
+                        <strong>
+                            <p style="font-family: 'PT Serif', serif;">OR</p>
+                        </strong>
                         <i id="Ni" class="fas fa-user"></i>
-                        <input class="inp" type="text" onfocus="this.placeholder = ''; document.getElementById('Ni').style.display = 'none';"
+                        <input class="inp" type="text"
+                            onfocus="this.placeholder = ''; document.getElementById('Ni').style.display = 'none';"
                             onblur="this.placeholder = 'Full Name'; document.getElementById('Ni').style.display = 'Unset';"
-                            id="fullname" placeholder="Full Name" required="" name="fullname" oninput="fillcheck();"><br><br>
+                            id="fullname" placeholder="Full Name" required="" name="fullname"
+                            oninput="fillcheck();"><br><br>
 
                         <i id="Pi" class="fas fa-pen"></i>
-                        <input class="inp" type="text" onfocus="this.placeholder = ''; document.getElementById('Pi').style.display = 'none';"
+                        <input class="inp" type="text"
+                            onfocus="this.placeholder = ''; document.getElementById('Pi').style.display = 'none';"
                             onblur="this.placeholder = 'Penname'; document.getElementById('Pi').style.display = 'Unset';"
                             name="pen" placeholder="Penname" id="penname" required="" oninput="fillcheck();"><br><br>
 
                         <i id="Ei" class="fas fa-envelope"></i>
-                        <input class="inp" type="email" onfocus="this.placeholder = ''; document.getElementById('Ei').style.display = 'none';"
+                        <input class="inp" type="email"
+                            onfocus="this.placeholder = ''; document.getElementById('Ei').style.display = 'none';"
                             onblur="this.placeholder = 'Email'; document.getElementById('Ei').style.display = 'Unset';"
-                            id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$]" required=""
-                            placeholder="Email" oninvalid="this.setCustomValidity('Please Enter Valid Email')" oninput="fillcheck();"><br><br>
+                            id="email" name="email"
+                            pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"
+                            required="" placeholder="Email"
+                            oninvalid="this.setCustomValidity('Please Enter Valid Email')"
+                            oninput="fillcheck();"><br><br>
 
                         <i id="Pai" class="fa fa-unlock" aria-hidden="true"></i>
-                        <input class="inp" onfocus="this.placeholder = ''; document.getElementById('Pai').style.display = 'none';"
+                        <input class="inp"
+                            onfocus="this.placeholder = ''; document.getElementById('Pai').style.display = 'none';"
                             onblur="this.placeholder = 'Password'; document.getElementById('Pai').style.display = 'Unset';"
-                            type="password" name="pass" placeholder="Password" id="password" required="" oninput="fillcheck();"><br><br>
+                            type="password" name="pass" placeholder="Password" id="password" required=""
+                            oninput="fillcheck();"><br><br>
 
                         <i id="RPai" class="fa fa-unlock" aria-hidden="true"></i>
-                        <input class="inp" onfocus="this.placeholder = ''; document.getElementById('RPai').style.display = 'none';"
+                        <input class="inp"
+                            onfocus="this.placeholder = ''; document.getElementById('RPai').style.display = 'none';"
                             onblur="this.placeholder = 'Re-Enter Password'; document.getElementById('RPai').style.display = 'Unset';"
                             type="password" name="confpass" placeholder="Re-Enter Password" id="password1" required=""
-                            oninput="fillcheck();"><br><br>
+                            oninput="fillcheck();"><br>
                         <button id="next" value="Next" onclick="showafter();alterflag();" disabled />Next</button><br>
                     </center>
                     <div id="after" style="display: none;">
                         <div id="writeups">
-                            <label>What are the type of writeups you want write ?</label><br>
+                            <label>What are the type of writeups you want read ?</label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="poetry">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Poetry" id="poetry">
                             <label class="form-check-label" for="poetry">
                                 Poetry
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="stories">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Short Story" id="stories">
                             <label class="form-check-label" for="stories">
-                                Short Stories
+                                Short Story
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="novellas">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Novella" id="novellas">
                             <label class="form-check-label" for="novellas">
-                                Novellas
+                                Novella
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="shayaries">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Shayari" id="shayaries">
                             <label class="form-check-label" for="shayaries">
-                                Shayaries
+                                Shayari
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="haikus">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Haiku" id="haikus">
                             <label class="form-check-label" for="haikus">
-                                Haikus
+                                Haiku
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="blogs">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Blog Post" id="blogs">
                             <label class="form-check-label" for="blogs">
-                                Blogs
+                                Blog Post
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="articles">
+                            <input class="form-check-input writingstyle" type="checkbox" value="Article" id="articles">
                             <label class="form-check-label" for="articles">
-                                Articles
+                                Article
                             </label>
                             <br><br><br>
                             <label>Languages Prefences:</label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="lang-hindi">
+                            <input class="form-check-input langpref" type="checkbox" value="Hindi" id="lang-hindi">
                             <label class="form-check-label" for="lang-hindi">
                                 Hindi
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="lang-eng">
+                            <input class="form-check-input langpref" type="checkbox" value="English" id="lang-eng">
                             <label class="form-check-label" for="lang-eng">
                                 English
                             </label><br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="regoption" onchange="enabler();activateblockregional();">
+                            <input class="form-check-input" type="checkbox" id="regoption"
+                                onchange="enabler();activateblockregional();">
                             <label class="form-check-label" for="lang-reg">
                                 Regional
                             </label><br>
                             <ul id="reglang">
-                                <li><label><input type="checkbox" class="regsubOption" id="1" disabled>&nbsp;&nbsp;Odia</label></li>
-                                <li><label><input type="checkbox" class="regsubOption" id="2" disabled>&nbsp;&nbsp;Bengali</label></li>
-                                <li><label><input type="checkbox" class="regsubOption" id="3" disabled>&nbsp;&nbsp;Urdu</label></li>
-                                <li><label><input type="checkbox" class="regsubOption" id="4" disabled>&nbsp;&nbsp;Marathi</label></li>
-                                <li><label><input type="checkbox" class="regsubOption" id="5" disabled>&nbsp;&nbsp;Tamil</label></li>
+                                <li><label><input type="checkbox" class="regsubOption langpref" value="Odia" id="1"
+                                            disabled>&nbsp;&nbsp;Odia</label></li>
+                                <li><label><input type="checkbox" class="regsubOption langpref" value="Bengali" id="2"
+                                            disabled>&nbsp;&nbsp;Bengali</label></li>
+                                <li><label><input type="checkbox" class="regsubOption langpref" value="Urdu" id="3"
+                                            disabled>&nbsp;&nbsp;Urdu</label></li>
+                                <li><label><input type="checkbox" class="regsubOption langpref" value="Marathi" id="4"
+                                            disabled>&nbsp;&nbsp;Marathi</label></li>
+                                <li><label><input type="checkbox" class="regsubOption langpref" value="Tamil" id="5"
+                                            disabled>&nbsp;&nbsp;Tamil</label></li>
                             </ul>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="checkbox" value="" id="intoption" onchange="enabler1();activateblockinternational();">
+                            <input class="form-check-input" type="checkbox" id="intoption"
+                                onchange="enabler1();activateblockinternational();">
                             <label class="form-check-label" for="lang-int">
                                 International
                             </label><br>
                             <ul id="intlang">
-                                <li><label><input type="checkbox" class="intsubOption" id="lang1" disabled>&nbsp;&nbsp;French</label></li>
-                                <li><label><input type="checkbox" class="intsubOption" id="lang2" disabled>&nbsp;&nbsp;Italian</label></li>
-                                <li><label><input type="checkbox" class="intsubOption" id="lang3" disabled>&nbsp;&nbsp;Portugese</label></li>
-                                <li><label><input type="checkbox" class="intsubOption" id="lang4" disabled>&nbsp;&nbsp;German</label></li>
-                                <li><label><input type="checkbox" class="intsubOption" id="lang5" disabled>&nbsp;&nbsp;Nepali</label></li>
+                                <li><label><input type="checkbox" class="intsubOption langpref" value="French"
+                                            id="lang1" disabled>&nbsp;&nbsp;French</label></li>
+                                <li><label><input type="checkbox" class="intsubOption langpref" value="Italian"
+                                            id="lang2" disabled>&nbsp;&nbsp;Italian</label></li>
+                                <li><label><input type="checkbox" class="intsubOption langpref" value="Portugese"
+                                            id="lang3" disabled>&nbsp;&nbsp;Portugese</label></li>
+                                <li><label><input type="checkbox" class="intsubOption langpref" value="German"
+                                            id="lang4" disabled>&nbsp;&nbsp;German</label></li>
+                                <li><label><input type="checkbox" class="intsubOption langpref" value="Nepali"
+                                            id="lang5" disabled>&nbsp;&nbsp;Nepali</label></li>
                             </ul>
                         </div>
                         <br><br>
@@ -186,21 +213,23 @@
                             </div>
                         </div>
 
-                        <label style="margin-left:6.2vw;">Enter the genre you want to write (with a # eg: #crime)</label>
+                        <label style="margin-left:6.2vw;">Enter the genre you want to read (with a # eg: #crime)</label>
                         <div class="row">
                             <div class="offset-sm-2 offset-1 col-12">
                                 <p id="repeattext"></p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="offset-xl-2 offset-lg-2 offset-md-2 offset-sm-2 offset-1 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10">
+                            <div
+                                class="offset-xl-2 offset-lg-2 offset-md-2 offset-sm-2 offset-1 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10">
                                 <input type="text" name="genre" id="genre"><br>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="offset-xl-2 offset-lg-2 offset-md-2 offset-sm-2 offset-1 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10">
+                            <div
+                                class="offset-xl-2 offset-lg-2 offset-md-2 offset-sm-2 offset-1 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10">
                                 <select id="select_id" name="select_id" onchange="addgenre();">
-                                    <option>-----TYPE ABOVE AND SELECT HERE-----</option>
+                                    <option>---------TYPE ABOVE AND SELECT HERE----------</option>
                                 </select>
                             </div>
                         </div><br>
@@ -222,7 +251,7 @@
                         </center>
                         <br><br>
                         <center>
-                            <button id="submit" type="submit">Submit</button><br>
+                            <button id="submit" onclick="btnsubmit();">Submit</button><br>
                         </center>
                         <br>
                     </div>
@@ -230,6 +259,68 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyC0eejUPM-FAgg6dXKwOX82qtasMCRSPl4",
+            authDomain: "inkbridgemailauth.firebaseapp.com",
+            databaseURL: "https://inkbridgemailauth.firebaseio.com",
+            projectId: "inkbridgemailauth",
+            storageBucket: "",
+            messagingSenderId: "190501518002"
+        }; firebase.initializeApp(config);
+
+        function btnsubmit() {
+            var i = 0;
+            var email = document.getElementById('email');
+            var password = document.getElementById('password');
+
+            var genresarr = [];
+            var genres = document.getElementsByClassName('hashbutton');
+            for (i = 0; i < genres.length; ++i) {
+                genresarr.push(genres[i].innerHTML);
+            }
+
+            var languagesarr = [];
+            var lang = document.getElementsByClassName('langpref');
+            for (i = 0; i < lang.length; ++i) {
+                if (lang[i].checked) {
+                    languagesarr.push(lang[i].value);
+                }
+            }
+
+            var writeups = [];
+            var writes = document.getElementsByClassName('writingstyle');
+            for (i = 0; i < writes.length; ++i) {
+                if (writes[i].checked) {
+                    writeups.push(writes[i].value);
+                }
+            }
+
+            var dbRefObj = firebase.database().ref();
+            var result = dbRefObj.push({
+                description: " ",
+                email: email.value,
+                followers: 0,
+                following: 0,
+                gender: "null",
+                genre: genresarr.toString(),
+                languages: languagesarr.toString(),
+                mobile: " ",
+                name: document.getElementById('fullname').value,
+                pens: 0,
+                profileimg: " ",
+                quills: " ",
+                writingstyle: writeups.toString()
+            });
+
+            firebase.auth().createUserWithEmailAndPassword(email.value, password.value).catch(function (error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorMessage);
+            });
+        }
+    </script>
     <script src="/js/main.js"></script>
 </body>
 
