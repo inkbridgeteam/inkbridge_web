@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
   <style>
     .example-open .modal-backdrop {
-      background-color: rgba(0,0,0,0.8);
-      }
-    
+      background-color: rgba(0, 0, 0, 0.8);
+    }
   </style>
 </head>
 
@@ -31,19 +30,27 @@
     </a>
     <form class="form-inline">
       <input class="form-control" type="text" id="searchfield" placeholder="Search">
-      <button class="btn btn-dark" id="searchbutton" type="submit"><i class="fas fa-search" style="color:black;"></i></button>
+      <button class="btn btn-dark" id="searchbutton" type="submit"><i class="fas fa-search"
+          style="color:black;"></i></button>
     </form>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-      aria-expanded="false" aria-label="Toggle navigation" id="togglerbutton">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="togglerbutton">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="navbar-brand" href="#" id="welcome">
-            <p id="navname">Raied Razi</p>
+          <div onclick="location.href='/profile';" id="stylewrapper">
             <img src="/Images/cardicon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-          </a>
+            <p id="navname">Raied Razi</p>
+            <center>
+              <div class="col-1 ml-3" id="userimgdropdown">
+                <a class="my-2 userimgopt" href="/profile">Profile</a>
+                <a class="my-2 userimgopt" href="#">Settings</a>
+                <a class="my-2 userimgopt" href="#">Logout</a>
+              </div>
+            </center>
+          </div>
           <a><img src="/Images/Quill.png" class="navicons">
             <p style="display: inline; color: white;">:</p>
             <p class="qnltext">10</p>
@@ -58,8 +65,11 @@
           </a>
           <a class="nav-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" id="notifbell">
             <img src="/Images/Bell.png" class="navicons" id="bellicon">
-            <span id="unreadnotif" style="display: inline-block; background-color:black; border-radius: 10px; height: 18px; min-width: 10.7px;"><span>
-                <p id="unreadnotiftext" style="font-weight: 500; text-align: center; padding-left: 4px; padding-right:4px; color: white; font-size: 11px;">12</p>
+            <span id="unreadnotif"
+              style="display: inline-block; background-color:black; border-radius: 10px; height: 18px; min-width: 10.7px;"><span>
+                <p id="unreadnotiftext"
+                  style="font-weight: 500; text-align: center; padding-left: 4px; padding-right:4px; color: white; font-size: 11px;">
+                  12</p>
               </span>
           </a>
         </li>
@@ -72,19 +82,10 @@
   <!--Landing page-->
   <div class="container mt-4">
     <div class="row">
-      <div class="col-3" style="background: #ECF0F1;" id="left">
+      <div class="col-3" id="left">
         <!--Start left part-->
         <div id="insideleft">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia non nulla maxime optio blanditiis voluptas
-          unde, explicabo dicta voluptate autem repudiandae itaque voluptatum provident sit perferendis modi enim quo
-          aliquam.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates quo, commodi delectus labore quis
-          fugiat dolor et architecto odio, placeat explicabo facere harum suscipit cum magnam, nesciunt laborum
-          molestias?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet placeat blanditiis ex quasi. Nobis
-          odit eum similique deserunt quia magnam quis porro nulla fugit debitis, repellendus ducimus suscipit, alias
-          saepe!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, est officiis. Mollitia ad sit repellat sint
-          commodi suscipit animi, iure non debitis eum, repudiandae unde veniam eaque deserunt, odit ipsa!Loremlor
+
         </div>
         <!--End left part-->
       </div>
@@ -93,7 +94,8 @@
         <!--Start center page-->
 
         <!---Add content button starts-->
-        <button class="btn btn-primary addcnt" data-toggle="modal" data-target="#myModal"><i class="fa fa-feather"></i></button>
+        <button class="btn btn-primary addcnt" data-toggle="modal" data-target="#myModal"><i
+            class="fa fa-feather"></i></button>
         <div class="containeraddcnt">
 
           <!-- The Modal -->
@@ -122,16 +124,17 @@
 
         <div class="card mb-3" id="stories" style="margin-top: 0">
           <div class="card-head">
-            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p1.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p1.jpg" class="img-fluid"></a>
             <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
           </div>
-          <img class="card-img-top img-responsive" src="/Images/p1.jpg" alt="Card image cap">
+          <img class="card-img-top img-fluid" src="/Images/p1.jpg" alt="Card image cap">
           <div class="card-body">
             <div class="up-section">
               <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>
-              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+              <a class="btn-floating btn-lg btn-tw" style="float:right" id="bookmark"><i
+                  class="fas fa-bookmark like disliked"></i></a><br>
             </div>
             <div class="bottom-section">
               <span class="counter" id="likes"><a href="">22</a> likes</span><br>
@@ -148,7 +151,8 @@
               <div class="addcoment" style="display:none;" id="commentPortion">
                 <div class="md-form">
                   <form method="post">
-                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...."
+                      rows="1"></textarea>
                   </form>
                 </div>
               </div>
@@ -158,16 +162,17 @@
 
         <div class="card mb-3" id="stories">
           <div class="card-head">
-            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p2.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p2.jpg" class="img-fluid"></a>
             <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
           </div>
-          <img class="card-img-top img-responsive" src="/Images/p2.jpg" alt="Card image cap">
+          <img class="card-img-top img-fluid" src="/Images/p2.jpg" alt="Card image cap">
           <div class="card-body">
             <div class="up-section">
               <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>&nbsp;
               <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>&nbsp;
-              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+              <a class="btn-floating btn-lg btn-tw" style="float:right" id="bookmark"><i
+                  class="fas fa-bookmark like disliked"></i></a><br>
             </div>
             <div class="bottom-section">
               <span class="counter" id="likes"><a href="">22</a> likes</span><br>
@@ -184,7 +189,8 @@
               <div class="addcoment" style="display:none;" id="commentPortion">
                 <div class="md-form">
                   <form method="post">
-                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...."
+                      rows="1"></textarea>
                   </form>
                 </div>
               </div>
@@ -194,16 +200,17 @@
 
         <div class="card mb-3" id="stories">
           <div class="card-head">
-            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p3.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p3.jpg" class="img-fluid"></a>
             <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
           </div>
-          <img class="card-img-top img-responsive" src="/Images/p3.jpg" alt="Card image cap">
+          <img class="card-img-top img-fluid" src="/Images/p3.jpg" alt="Card image cap">
           <div class="card-body">
             <div class="up-section">
               <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>&nbsp;
               <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>&nbsp;
-              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+              <a class="btn-floating btn-lg btn-tw" style="float:right" id="bookmark"><i
+                  class="fas fa-bookmark like disliked"></i></a><br>
             </div>
             <div class="bottom-section">
               <span class="counter" id="likes"><a href="">22</a> likes</span><br>
@@ -220,7 +227,8 @@
               <div class="addcoment" style="display:none;" id="commentPortion">
                 <div class="md-form">
                   <form method="post">
-                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...."
+                      rows="1"></textarea>
                   </form>
                 </div>
               </div>
@@ -234,7 +242,7 @@
           <pre>People you may know</pre>
           <section id="cards">
             <div id="card--content" style="margin-left: 0;">
-              <a><img class="card-img-top img-responsive" src="/Images/p1.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p1.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -242,7 +250,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p2.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p2.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -250,7 +258,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p3.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p3.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -258,7 +266,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p4.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p4.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -266,7 +274,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p5.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p5.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -274,7 +282,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p1.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p1.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -282,7 +290,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p2.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p2.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -290,7 +298,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p3.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p3.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -298,7 +306,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p4.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p4.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -306,7 +314,7 @@
               </div>
             </div>
             <div id="card--content">
-              <a><img class="card-img-top img-responsive" src="/Images/p5.jpg" alt="Card image cap"></a>
+              <a><img class="card-img-top img-fluid" src="/Images/p5.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h6 class="card-title" id="username">Username</h6>
                 <p>From Bhubaneswar</p>
@@ -319,16 +327,17 @@
 
         <div class="card mb-3" id="stories">
           <div class="card-head">
-            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p4.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p4.jpg" class="img-fluid"></a>
             <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
           </div>
-          <img class="card-img-top img-responsive" src="/Images/p4.jpg" alt="Card image cap">
+          <img class="card-img-top img-fluid" src="/Images/p4.jpg" alt="Card image cap">
           <div class="card-body">
             <div class="up-section">
               <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>&nbsp;
               <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>&nbsp;
-              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+              <a class="btn-floating btn-lg btn-tw" style="float:right" id="bookmark"><i
+                  class="fas fa-bookmark like disliked"></i></a><br>
             </div>
             <div class="bottom-section">
               <span class="counter" id="likes"><a href="">22</a> likes</span><br>
@@ -345,7 +354,8 @@
               <div class="addcoment" style="display:none;" id="commentPortion">
                 <div class="md-form">
                   <form method="post">
-                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...."
+                      rows="1"></textarea>
                   </form>
                 </div>
               </div>
@@ -361,7 +371,8 @@
 
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg" style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
+        <div class="modal-dialog modal-lg"
+          style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
           <div class="modal-content">
 
             <div class="modal-header text-center">
@@ -486,7 +497,7 @@
 
       <!---Right Part Starts-->
 
-      <div class="col-lg-3 col-md-6 col-sm-6" style="background:#ECF0F1;" id="right">
+      <div class="col-lg-3 col-md-6 col-sm-6" id="right">
         <div class="page-header text-center">
           <h4 class="notification-title">Notifications</h4>
         </div>
@@ -597,6 +608,7 @@
 
         <!---CONSIGNMENT LARGE SCREEN STARTS-->
         <div class="page-header text-center">
+          <br>
           <h4 class="consignment-title">Consignments</h4>
         </div>
         <div class="consignment-body">

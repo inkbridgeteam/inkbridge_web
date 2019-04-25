@@ -48,9 +48,11 @@ img.navicons {
 	font-size: 23px;
 }
 
-#welcome {
+#navname {
 	-webkit-text-fill-color: white;
 	-webkit-text-stroke-color: white;
+	font-size: 24px;
+	font-weight: 600;
 }
 
 #left,
@@ -109,10 +111,11 @@ img.navicons {
 
 .card {
 	background: #fff;
-	box-shadow: 0.8vw 0.3vw 0.8vw #888888;
+	-webkit-box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.75);
 	padding: 2vw;
 	box-sizing: border-box;
-	border-radius: 1vw;
 	margin-top: 7%;
 }
 
@@ -332,6 +335,37 @@ p#navname {
 	margin: 0 auto;
 }
 
+#stylewrapper{
+	display: inline-block;
+	cursor: pointer;
+}
+
+#userimgdropdown{
+	display: none;
+	position: absolute;
+	background-color: white;
+	border-radius: 5px;	
+	height: 110px;
+	cursor: default;
+	box-shadow: 0.01px 0.01px 14px;
+}
+
+.userimgopt{
+	display: block;
+	color: black;
+}
+
+#userimgdropdown .userimgopt:hover{
+	text-decoration: none;
+	color: black;
+}
+
+#stylewrapper:hover #userimgdropdown{
+	display: block;
+	align-content: center;
+}
+
+
 /*Universal Css Ends*/
 
 
@@ -361,7 +395,6 @@ p#navname {
 	}
 
 	.notification-title {
-		padding-top: 1vw;
 		font-size: 1.8vw;
 	}
 
@@ -509,7 +542,6 @@ p#navname {
 	.consignment-list .accept:hover {
 		cursor: pointer;
 		background-color: #2874A6;
-		#C0392B
 	}
 
 	.consignment-list .ignore:hover {
@@ -567,7 +599,7 @@ p#navname {
 		padding-top:15px;
 	}
 
-	a#welcome.navbar-brand {
+	.navbar-brand {
 		margin-right: 4px;
 	}
 
@@ -673,14 +705,12 @@ p#navname {
 
 	.card {
 		background: #fff;
-		box-shadow: 0.8vw 0.3vw 0.8vw #888888;
-		padding: 20px;
 		padding-top: 10px;
 		box-sizing: border-box;
-		border-radius: 10px;
 		margin-top: 7%;
 		width: 80vw;
 		padding-bottom: 2px;
+		box-shadow: none;
 	}
 
 	.card-head img {

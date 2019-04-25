@@ -65,6 +65,14 @@ app.get("/eauth", function(req, res){
     res.render("emailauth");
 });
 
+app.get("/content2", function(req, res){
+    res.render("content2");
+});
+
+app.get("/nextpage", function(req, res){
+    res.render("nextpage");
+});
+
 app.get("/tag", (req, res) => {
     if (req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
