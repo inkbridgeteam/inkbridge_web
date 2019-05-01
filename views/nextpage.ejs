@@ -265,11 +265,13 @@
     </div>
     <script>
         var data = JSON.parse(localStorage.getItem('data'));
-
+        //var data = localStorage.getItem('data');
+        console.log(data);
         var quill = new Quill('#creation-box');
         quill.disable();
 
-        quill.setContents(data);
+        quill.setContents(data['ops']);
+        
 
         function set(source) {
             document.getElementById('creation-box').style.backgroundImage = "url(" + source + ")";

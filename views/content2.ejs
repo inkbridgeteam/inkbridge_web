@@ -87,7 +87,7 @@
                     <input style="border-radius:0px; border:none;" type="text" id="tags" class="form-control"
                         placeholder="tags">
                 </div>
-                <button onclick="get(); location.href='/nextpage';" id="nextbtn" class="px-4 pt-1 pb-2 mt-4 mb-3 mb-sm-0" style="float: right" name="upvote">Next &raquo;</button> 
+                <button onclick="get();  location.href='/nextpage';"  id="nextbtn" class="px-4 pt-1 pb-2 mt-4 mb-3 mb-sm-0" style="float: right" name="upvote">Next &raquo;</button> 
             </div>
         </div>
     </div>
@@ -125,10 +125,29 @@
             theme: 'snow'
         });
 
+        
         function get(){
             console.log(editor.getContents());
             localStorage.setItem('data', JSON.stringify(editor.getContents()));
         }
+
+        function play() {
+            const len = editor.getLength();
+            const text = editor.getText(0, len);
+            console.log(editor.getContents());
+            const gText = editor.getContents();
+            const contents = {
+                        "ops": [
+                            {
+                                "insert": "Gandalf the Grey\n"
+                            }
+                        ]}
+            let container = document.querySelector('#editor');
+            container.innerHtml = JSON.stringify(contents,undefined,2);
+            editor.setContents(gText['ops']);
+        }
+
+        
     </script>
 </body>
 
