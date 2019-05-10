@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css?family=Concert+One|Cormorant+Garamond|Dancing+Script|Fredericka+the+Great|Josefin+Slab|Kaushan+Script|Knewave|Lobster|News+Cycle|Oleo+Script|Patrick+Hand|Permanent+Marker|Special+Elite|Vidaloka"
         rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.core.js"></script>
     <style>
         .swiper-container {
             height: 150px;
@@ -265,10 +266,11 @@
     </div>
     <script>
         var data = JSON.parse(localStorage.getItem('data'));
-
+        console.log(data);
+    
         var quill = new Quill('#creation-box');
         quill.disable();
-
+    
         quill.setContents(data);
 
         function set(source) {

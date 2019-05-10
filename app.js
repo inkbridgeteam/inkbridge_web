@@ -73,6 +73,26 @@ app.get("/nextpage", function(req, res){
     res.render("nextpage");
 });
 
+app.get("/signup1", function(req, res){
+    res.render('signup1');
+});
+
+app.get("/signup2", function(req, res){
+    res.render('signup2');
+});
+
+app.get("/signup3", function(req, res){
+    res.render('signup3');
+});
+
+app.get('/content3', function(req, res){
+    res.render('content3');
+});
+
+app.get("/nextpage2", function(req, res){
+    res.render("nextpage2");
+});
+
 app.get("/tag", (req, res) => {
     if (req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');

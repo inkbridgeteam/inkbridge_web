@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="icon" href="/Images/logo.png">
+</head>
+<style>
+    body {
+        width: 100wh;
+        height: 90vh;
+        color: #fff;
+        background: linear-gradient(-45deg, #2c3e50, #57606f, #2f3542, #747d8c);
+        background-size: 400% 400%;
+        -webkit-animation: Gradient 35s ease infinite;
+        -moz-animation: Gradient 35s ease infinite;
+        animation: Gradient 35s ease infinite;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    div#divcontainer {
+        -webkit-box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 0.34);
+        -moz-box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 0.34);
+        box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 0.34);
+        background-color: rgba(0, 0, 0, 0.246);
+    }
+
+    .options {
+        background-color: transparent;
+        color: white;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50px;
+        transition-duration: 0.3s;
+    }
+
+    .options:hover {
+        color: black;
+        background-color: white;
+        transition-duration: 0.3s;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    #next{
+        background-color: lightslategrey;
+        border: none;
+        transition-duration: 0.4s;
+    }
+
+    #next:hover{
+        background-color: #343a40;
+        color: white;
+        transition-duration: 0.4s;
+        -webkit-box-shadow: 0px 0px 4px 2px rgba(219,219,219,1);
+        -moz-box-shadow: 0px 0px 4px 2px rgba(219,219,219,1);
+        box-shadow: 0px 0px 4px 2px rgba(219,219,219,1);   
+    }
+
+    .reg, .int{
+        border-style: dashed;
+        border-width: 1px;
+        border-radius: 50px;
+        transition-duration: 0.3s;
+        background-color: transparent;
+        color: white;
+    }   
+
+    .reg:hover, .int:hover{
+        background-color: rgba(255, 255, 255, 0.205);
+    }
+
+    .regional{
+        display: none;
+    }
+    
+    .international{
+        display: none;
+    }
+
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-2">
+                <img src="/Images/logo.png" width="140" height="140" class="img-fluid" id="logo">
+            </div>
+        </div>
+        <div class="row">
+            <div id="divcontainer" class="offset-xl-3 offset-0 col-xl-6 col-12">
+                <center>
+                    <div class="row">
+                        <div class="col-12 pt-3">
+                            <h1>Language Preferences?</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-xl-5 p-3">
+                            <button onclick="changer(this.id);" id="english" class="p-2 pr-4 pl-3 mt-3 mx-1 options"><i class="fas fa-plus"></i>&nbsp;English</button>
+                            <button onclick="changer(this.id);" id="hindi" class="p-2 pr-4 pl-3 mt-3 mx-1 options"><i class="fas fa-plus"></i>&nbsp;हिंदी</button>
+                            <button onclick="expand(this.id);" id="regional" class="p-2 px-3 mt-3 mx-1 reg">Regional</button>
+                            <button onclick="changer(this.id);" id="odia" class="p-2 pr-4 pl-3 mt-3 mx-1 options regional"><i class="fas fa-plus"></i>&nbsp;ଓଡ଼ିଆ</button>
+                            <button onclick="changer(this.id);" id="bengali" class="p-2 pr-4 pl-3 mt-3 mx-1 options regional"><i class="fas fa-plus"></i>&nbsp;বাংলা</button>
+                            <button onclick="changer(this.id);" id="urdu" class="p-2 pr-4 pl-3 mt-3 mx-1 options regional"><i class="fas fa-plus"></i>&nbsp;اُردُو‎</button>
+                            <button onclick="changer(this.id);" id="marathi" class="p-2 pr-4 pl-3 mt-3 mx-1 options regional"><i class="fas fa-plus"></i>&nbsp;मराठी</button>
+                            <button onclick="changer(this.id);" id="tamil" class="p-2 pr-4 pl-3 mt-3 mx-1 options regional"><i class="fas fa-plus"></i>&nbsp; தமிழ்</button>
+                            <button onclick="changer(this.id);" id="telegu" class="p-2 pr-4 pl-3 mt-3 mx-1 options regional"><i class="fas fa-plus"></i>&nbsp; తెలుగు</button>
+                            <button onclick="expand(this.id);" id="international" class="p-2 px-3 mt-3 mx-1 int">International</button>
+                            <button onclick="changer(this.id);" id="french" class="p-2 pr-4 pl-3 mt-3 mx-1 options international"><i class="fas fa-plus"></i>&nbsp;Französisch</button>
+                            <button onclick="changer(this.id);" id="german" class="p-2 pr-4 pl-3 mt-3 mx-1 options international"><i class="fas fa-plus"></i>&nbsp;Deutsche</button>
+                            <button onclick="changer(this.id);" id="spanish" class="p-2 pr-4 pl-3 mt-3 mx-1 options international"><i class="fas fa-plus"></i>&nbsp;Español</button>
+                            <button onclick="changer(this.id);" id="italian" class="p-2 pr-4 pl-3 mt-3 mx-1 options international"><i class="fas fa-plus"></i>&nbsp;Italiano</button>
+                        </div>
+                    </div>
+                </center>
+                <div class="mb-3 row">
+                    <div class="col-12">
+                        <button onclick="location.href='/signup3'" class="px-4 py-1" id="next" style="float:right">Next &raquo;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changer(id){
+            
+            var button = document.getElementById(id);
+
+            if(button.style.backgroundColor == 'white'){
+                button.style.backgroundColor = 'transparent';
+                button.style.color = 'white';
+            }
+
+            else{
+                button.style.backgroundColor = 'white';
+                button.style.color = 'black';
+            }
+        }
+
+        function expand(btn_id){
+            document.getElementById(btn_id).style.display = 'none';
+
+            if(btn_id == 'regional'){
+                var regional = document.getElementsByClassName('regional');
+                for( var i=0; i<regional.length; ++i){
+                    regional[i].style.display = 'inline';
+                }
+            }
+
+            else{
+                var international = document.getElementsByClassName('international');
+                for( var i=0; i<international.length; ++i){
+                    international[i].style.display = 'inline';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

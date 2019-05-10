@@ -232,8 +232,7 @@ img.navicons {
 
 #show-suggestions .card-title {
 	font-size: 1.5vw;
-	margin-top: -25px;
-	margin-left: -10px;
+	margin-left: 8px;
 }
 
 #show-suggestions .btn {
@@ -259,6 +258,14 @@ img.navicons {
 	font-size: 0.8vw;
 	margin-left: -8px;
 	font-weight: lighter;
+}
+
+#show-suggestions .card-body a{
+	justify-self: center;
+	align-self: center;
+	justify-content: center;
+	align-content: center;
+	margin-left: 30px;
 }
 
 
@@ -364,6 +371,36 @@ p#navname {
 	display: block;
 	align-content: center;
 }
+
+.example-open .modal-backdrop {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .float{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:8vh;
+	right:26vw;
+	background-color:slategray;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	z-index: 1;
+	transition-duration: 0.2s;
+  }
+
+  .float:hover{
+	  text-decoration: none;
+	  color: black;
+	  -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	  -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	  box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	  transition-duration: 0.2s;
+  }
 
 
 /*Universal Css Ends*/
@@ -551,28 +588,6 @@ p#navname {
 
 	/*-----CONSIGNMENT CSS ENDS-----*/
 
-
-	/*-------ADD CONTENT BUTTON STARTS-----*/
-
-	.addcnt {
-		position: fixed;
-		right: 28vw;
-		bottom: 10px;
-		float: right;
-		z-index: 10;
-		font-size: 1.5vw;
-		outline: 0;
-		border-radius: 50%;
-	}
-
-	.addcnt i {
-		-webkit-text-stroke-width: 0.5px;
-		-webkit-text-fill-color: black;
-		-webkit-text-stroke-color: white;
-	}
-
-	/*-------ADD CONTENT BUTTON ENDS-----*/
-
 }
 
 /*Desktop View Ends*/
@@ -610,7 +625,7 @@ p#navname {
 	#searchfield {
 		width: 46vw;
 		display: inline;
-		margin-left: -8vw;
+		margin-left: -4vw;
 	}
 
 	img.navicons {
@@ -650,7 +665,7 @@ p#navname {
 	#show-suggestions {
 		padding-top: 1vw;
 		padding-bottom: 1vw;
-		min-width: 80vw;
+		min-width: 86vw;
 	}
 
 	#card--content {
@@ -668,8 +683,6 @@ p#navname {
 
 	#show-suggestions .card-title {
 		font-size: 15px;
-		margin-top: -25px;
-		margin-left: -10px;
 	}
 
 	#show-suggestions .btn {
@@ -684,6 +697,7 @@ p#navname {
 	#show-suggestions .card-body p {
 		margin-top: -10px;
 		font-size: 8px;
+		margin-left: 8px;
 	}
 
 	#left {
@@ -708,7 +722,7 @@ p#navname {
 		padding-top: 10px;
 		box-sizing: border-box;
 		margin-top: 7%;
-		width: 80vw;
+		width: 86vw;
 		padding-bottom: 2px;
 		box-shadow: none;
 	}
@@ -725,19 +739,24 @@ p#navname {
 		margin-left: -25px;
 	}
 
+	.card-body{
+		margin-top: 4%;
+		padding: 0%;
+		height: 100px;
+		justify-content: center;
+		align-items: center;
+	}
 	.up-section {
-		margin-left: -30px;
+		width: 100%;
 		margin-top: -15px;
 	}
 
 	.up-section i {
 		font-size: 3vw;
-		margin-right: -10px;
 	}
 
 	.bottom-section {
-		margin-left: -15px;
-		font-size: 2.5vw;
+		margin:0;
 	}
 
 	.timeadd {
@@ -759,7 +778,11 @@ p#navname {
 		font-size: 1.5vw;
 	}
 
-
+	.float{
+		right: 12px;
+		width: 40px;
+		height: 40px;
+	}
 
 	/*-----NOTIFICATION CSS-----*/
 
@@ -838,23 +861,6 @@ p#navname {
 	/*-----NOTIFICATION CSS ENDS-----*/
 
 	/*-------ADD CONTENT BUTTON STARTS-----*/
-
-	.addcnt {
-		position: fixed;
-		right: 2vw;
-		bottom: 10px;
-		float: right;
-		z-index: 10;
-		font-size: 1.5vw;
-		outline: 0;
-		border-radius: 50%;
-	}
-
-	.addcnt i {
-		-webkit-text-stroke-width: 0.5px;
-		-webkit-text-fill-color: black;
-		-webkit-text-stroke-color: white;
-	}
 
 	/*-------ADD CONTENT BUTTON ENDS-----*/
 }

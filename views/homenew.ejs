@@ -4,7 +4,7 @@
 <head>
   <title>InkBridge</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/Images/logo.png">
   <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/css/homenew.css">
@@ -13,11 +13,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
-  <style>
-    .example-open .modal-backdrop {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-  </style>
 </head>
 
 <body>
@@ -81,7 +76,7 @@
 
   <!--Landing page-->
   <div class="container mt-4">
-    <div class="row">
+    <div class="row no-gutters">
       <div class="col-3" id="left">
         <!--Start left part-->
         <div id="insideleft">
@@ -94,33 +89,10 @@
         <!--Start center page-->
 
         <!---Add content button starts-->
-        <button class="btn btn-primary addcnt" data-toggle="modal" data-target="#myModal"><i
-            class="fa fa-feather"></i></button>
-        <div class="containeraddcnt">
-
-          <!-- The Modal -->
-          <div class="modal fade" id="myModal">
-            <div class="modal-dialog modal-dialog-centered contcreation">
-              <div class="modal-content contentcreation">
-                <!-- Modal body -->
-                <div class="modal-body">
-                  <div class="row" style="padding-top:5px; padding-bottom:5px;">
-                    <button class="btn btn-danger wtUpBox">Poetry</button>
-                    <button class="btn btn-danger wtUpBox">Stories</button>
-                    <button class="btn btn-danger wtUpBox">Blogs</button>
-                  </div>
-                  <div class="row" style="padding-top:5px; padding-bottom:5px;">
-                    <button class="btn btn-danger wtUpBox">Shayaris</button>
-                    <button class="btn btn-danger wtUpBox">Haikus</button>
-                    <button class="btn btn-danger wtUpBox">Essays</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+        
+        <a href="/content2" class="float">
+            <i  class="fa fa-plus my-float"></i>
+        </a>
 
         <div class="card mb-3" id="stories" style="margin-top: 0">
           <div class="card-head">
@@ -129,7 +101,7 @@
           </div>
           <img class="card-img-top img-fluid" src="/Images/p1.jpg" alt="Card image cap">
           <div class="card-body">
-            <div class="up-section">
+            <div  class="up-section">
               <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>
               <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>
