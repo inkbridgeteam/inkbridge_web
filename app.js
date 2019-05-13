@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Tag = require('./models/TagSchema');
+const compression = require('compression');
 
 //Middlewares setup
 app.use(
@@ -10,6 +11,7 @@ app.use(
     extended: true
   })
 );
+app.use(compression());
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(
