@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homepage</title>
+  <link rel="icon" href="/Images/logo.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/homenew1.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Noto+Sans+JP|Ubuntu+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark">
+    <a class="navbar-brand" id="brand" href="#">
+      <img src="/Images/logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+    </a>
+    <form class="form-inline">
+      <input class="form-control" type="text" id="searchfield" placeholder="Search" autocomplete="off">
+      <button class="btn btn-dark" id="searchbutton" type="submit"><i class="fas fa-search"
+          style="color:black;"></i></button>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="togglerbutton">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div id="stylewrapper">
+            <img src="/Images/cardicon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            <p id="navname">Raied Razi</p>
+            <center>
+              <div class="col-3 col-sm-2 col-md-1 col-xl-1 ml-3" id="userimgdropdown">
+                <a class="my-2 userimgopt" href="/profile">Profile</a>
+                <a class="my-2 userimgopt" href="#">Settings</a>
+                <a class="my-2 userimgopt" href="#">Logout</a>
+              </div>
+            </center>
+          </div>
+          <span id="userachievements">
+              <a><img src="/Images/Quill.png" class="navicons">
+                <p style="display: inline; color: white;">:</p>
+                <p class="qnltext">10</p>
+              </a>
+              <a><img src="/Images/Pen.png" class="navicons">
+                <p style="display: inline; color: white;">:</p>
+                <p class="qnltext">2</p>
+              </a>
+              <a><img src="/Images/Level.png" class="navicons">
+                <p style="display: inline; color: white;">:</p>
+                <p class="qnltext">2</p>
+              </a>
+          </span>
+          <span id="notificationbellcontainer">
+            <a class="nav-link pt-0" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" id="notifbell">
+              <img src="/Images/Bell.png" class="navicons" id="bellicon">
+              <span class="badge badge-pill badge-dark">7</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 d-none d-lg-block">
+
+      </div>
+      <div class="col-12 col-md-9 col-lg-6">
+        <div style="border-radius:0px;" class="card mx-auto mb-3 mt-1">
+          <div style="align-content:center;" class="pt-0 px-0 bg-transparent card-header">
+            <img id="authorimage" src="/Images/cardicon.png" class="rounded-circle img-fluid">
+            <h2 id="authorname">Neelanjan Manna</h2>
+            <i style="float:right;" class="mt-2 mt-md-2 mt-lg-3 fas fa-lg fa-ellipsis-v"></i>
+          </div>
+          <img src="/Images/Poem.jpg" class="card-img-top img-fluid" alt="...">
+          <div class="card-body mt-2 pt-1 px-0">
+            <a id="like">
+              <i style="vertical-align: middle;" class="fas fa-lg fa-heart like disliked"></i>
+            </a>
+            <p style="display:inline;">75</p>
+            <a id="comment">
+              <i style="vertical-align: middle;"
+                class="far fa-lg ml-xl-3 ml-lg-2 ml-md-3 ml-sm-3 ml-1 fa-comment-alt"></i>
+            </a>
+            <p style="display:inline;">14</p>
+            <i style="vertical-align: middle;" class="fas fa-lg ml-xl-3 ml-lg-2 ml-md-3 ml-sm-3 ml-1 fa-retweet"></i>
+            <p style="display:inline;">&nbsp;25</p>
+            <a style="vertical-align: middle;" id="bookmark"><i
+                class="fas fa-lg ml-xl-3 ml-lg-2 ml-md-3 ml-sm-3 ml-1 fa-bookmark like disliked"></i></a>
+
+            <i style="float:right;" class="ml-2 fab fa-lg mt-1 fa-twitter"></i>
+            <i style="float:right" class="ml-2 fab fa-lg mt-1 fa-facebook-f"></i>
+            <i style="float:right" class="fab fa-lg mt-1 fa-instagram"></i>
+
+            <br><br>
+            <h5 class="card-title">Carnival Nights</h5>
+            <p id="text-content" class="card-text">
+              Of the solitary colors of night,<br>
+              your hands had wreathed me<br>
+              a necklace of fireflies<br><br>
+
+              and although they had sublimed<br>
+              amid the dappling colors<br>
+              of Ferris wheel lights<br><br>
+
+              our entwined fingers had folded in<br>
+              a lot more than just the sweetness<br>
+              of that cotton candy we'd shared.<br><br>
+
+              To that, we had laughed together,<br>
+              for we didn't knew our teenage hearts<br>
+              may also tangle in a web of feelings<br><br>
+
+              but all I remember of that moment is how<br>
+              I already knew all that you'd wanted to say<br>
+              and maybe that's how I know love.<br><br>
+
+              <p style="color:grey">#love #romance #adventure #fiction #poetry</p>
+            </p>
+            <hr>
+            <div id="comments">
+              <p style="cursor:pointer" class="card-text text-muted"><strong>Load 15 more comments</strong></p>
+              <div><strong>Ishaan Banerjee:</strong> An awesome take on this one. Loved reading it!</div>
+              <div><strong>Shashikant Mony:</strong> A wonderful take on this one, absolutely loved the
+                parting lines. Beautifully done!</div>
+              <div id="comment-container" class="mt-3 form-group">
+                <input type="text" placeholder="Add a comment" onfocus="this.placeholder = '';"
+                  onblur="this.placeholder = 'Add a comment';" autocomplete="false" class="form-control" id="comment">
+              </div>
+              <p class="card-text"><small class="text-muted">3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+        <h5>Suggestions for you</h5>
+        <div style="height: 165px;" class="swiper-container">
+          <div style="height: 175px;" class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Neelanjan Manna</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Pranjal Agnihotri</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Sailesh Mishra</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Shashikant Mony</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Aseer Ahmad</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Ishaan Banerjee</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Shashikant Mony</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Pranjal Agnihotri</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Aseer Ahmad</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+            <div class="swiper-slide">
+              <img src="/Images/cardicon.png" width="50" class="mt-2 mb-1 rounded-circle img-fluid" />
+              <p class="mb-1" style="font-size:12px;"><strong>Ishaan Banerjee</strong></p>
+              <button style="border-radius:0px;" class="btn btn-sm btn-dark"><i
+                  class="fas fa-user-plus"></i>&nbsp;Follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: fixed; scroll-behavior: smooth; overflow-y: scroll; max-height: 570px;" id="right"
+        class="offset-sm-9 col-3 d-none d-md-block">
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Aseer Ahmad </strong>started following you.</p>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">20 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Sailesh Mishra </strong>liked your post.</p>
+            <i class="ml-1 fas fa-external-link-square-alt"></i>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">31 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Praanjal Agnihotri </strong>commented on your post.</p>
+            <i class="ml-1 fas fa-external-link-square-alt"></i>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">31 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Ishaan Banerjee </strong>shared your post.</p>
+            <i class="ml-1 fas fa-external-link-square-alt"></i>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">45 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Shashikant Mony </strong>has sent you a consignment.</p>
+            <br>
+            <div class="mt-3 px-xl-5 px-lg-4 px-md-0">
+              <button style="border-radius:0px" class="btn btn-dark btn-sm">Accept</button><button
+                style="float:right; border-radius:0px;" class="btn btn-danger btn-sm">Decline</button>
+            </div>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">50 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Ishaan Banerjee </strong>started following you.</p>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="sticky toast" data-autohide="false">
+          <div class="toast-header">
+            <small class="mr-auto">1 hour ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            <img src="/Images/cardicon.png" width="20px" class="rounded mr-1" alt="...">
+            <p style="display:inline"><strong>Sailesh Mishra </strong>started following you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg"
+          style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
+          <div class="modal-content">
+
+            <div class="modal-header text-center">
+              <h4 class="notification-title">Notifications</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="notification-body">
+                <div class="notifications">
+                  <ul class="notification-list">
+
+
+                    <!---NOTIFICATION 1 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 2 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/hearticon.png" class="media-object cat-icon rounded-circle" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and 4 others Like your Post.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 3 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/commenticon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> commented on your
+                            post.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <!---NOTIFICATION 4 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 5 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/shareicon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> shared your post.</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">InkBridge</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br><br><br><br><br><br><br>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+
+    $(".fa-heart").click(function () {
+      $(this).toggleClass("liked disliked");
+    });
+
+    $(".fa-bookmark").click(function () {
+      $(this).toggleClass("like disliked");
+    });
+
+    $(document).ready(function () {
+      $('.toast').toast('show');
+    });
+
+    $('#myModal').on('show.bs.modal', function (e) {
+      $('body').addClass("example-open");
+    }).on('hide.bs.modal', function (e) {
+      $('body').removeClass("example-open");
+    })
+
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 9,
+      freeMode: true,
+      speed: 1400,
+      visibilityFullFit: true,
+      autoResize: false
+    });
+
+  </script>
+</body>
+
+</html>

@@ -105,6 +105,10 @@ app.get('/nextpage2', function(req, res) {
   res.render('nextpage2');
 });
 
+app.get("/homenew1", function(req, res){
+  res.render('homenew1');
+});
+
 app.get('/tag', (req, res) => {
   if (req.query.search) {
     const regex = new RegExp(escapeRegex(req.query.search), 'gi');
