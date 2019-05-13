@@ -376,7 +376,8 @@ p#navname {
 	background-color: rgba(0, 0, 0, 0.8);
   }
 
-  .float{
+.float{
+	margin-left: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -384,23 +385,22 @@ p#navname {
 	width:50px;
 	height:50px;
 	bottom:8vh;
-	right:26vw;
 	background-color:slategray;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
 	z-index: 1;
 	transition-duration: 0.2s;
-  }
+}
 
-  .float:hover{
-	  text-decoration: none;
-	  color: black;
-	  -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
-	  -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
-	  box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
-	  transition-duration: 0.2s;
-  }
+.float:hover{
+	text-decoration: none;
+	color: black;
+	-webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	transition-duration: 0.2s;
+}
 
 
 /*Universal Css Ends*/

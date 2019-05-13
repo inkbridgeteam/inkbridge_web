@@ -1,0 +1,411 @@
+/*Universal Css Starts*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: white;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+nav {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-weight: 100;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Abel', sans-serif;
+	font-weight: 800;
+}
+
+img.navicons {
+	display: inline;
+}
+
+.navbar {
+	background-image: linear-gradient(rgb(44, 44, 44), white) !important;
+}
+
+#notifbell {
+	display: none;
+}
+
+#notification:hover {
+	-webkit-text-stroke-width: 2px;
+	color: #F4D03F;
+	-webkit-text-stroke-color: black;
+}
+
+.nav-item i {
+	margin-top: 0.5vw;
+	font-size: 25px;
+	-webkit-text-stroke-width: 2px;
+	color: white;
+	-webkit-text-stroke-color: black;
+}
+
+.navbar-brand {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: black;
+	-webkit-text-stroke-color: black;
+	font-size: 23px;
+}
+
+#navname {
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-color: white;
+	font-size: 24px;
+}
+
+.card {
+	background: #fff;
+	-webkit-box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.75);
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.liked {
+	-webkit-text-fill-color: red;
+	-webkit-text-stroke-color: red;
+}
+
+.disliked {
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-color: black;
+}
+
+#likes a {
+	text-decoration: none;
+	color: black;
+}
+
+#searchfield {
+	display: inline;
+	width: 21vw;
+	border: none;
+	border-radius: 0px;
+	margin: none;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	margin-left: 30vw;
+}
+
+#searchfield:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none;
+}
+
+#searchbutton {
+	height: 38px;
+	background-color: white;
+	border-radius: 0px;
+	margin: none;
+	outline: none;
+	border: none;
+	display: inline;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+#searchbutton:active {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+p.qnltext {
+	display: inline;
+	color: white;
+	font-size: 21px;
+}
+
+p#navname {
+	text-decoration: none;
+	text-shadow: none;
+	display: inline;
+	margin-left: 0.2px;
+	vertical-align: -webkit-baseline-middle;
+}
+
+#stylewrapper{
+	display: inline-block;
+	cursor: pointer;
+}
+
+.example-open .modal-backdrop {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+
+#authorname{
+	display:inline-block;
+	font-size: 2.5vw;
+	vertical-align: -webkit-baseline-middle;
+}
+
+#authorimage{
+	width: 4vw;
+}
+
+#userachievements{
+	vertical-align: -webkit-baseline-middle;
+}
+
+i:hover {
+	cursor: pointer;
+}
+
+#comment {
+	border: none;
+	padding: 0;
+}
+
+#comment:focus {
+	-webkit-box-shadow: 0px 7px 10px -6px rgba(153, 153, 153, 1);
+	-moz-box-shadow: 0px 7px 10px -6px rgba(153, 153, 153, 1);
+	box-shadow: 0px 7px 10px -6px rgba(153, 153, 153, 1);
+	border-bottom: 1px solid black;
+	border-radius: 0%;
+	padding-left: 12px;
+}
+
+.toast {
+	border-radius: 0px;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.swiper-container {
+	width: 100%;
+}
+
+.swiper-slide {
+	margin-top: 2.5px;
+	box-sizing: content-box;
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	-webkit-align-items: center;
+	align-items: center;
+	width: 100px !important;
+	height: 150px !important;
+	padding: 5px !important;
+	-webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+button.btn:focus {
+	box-shadow: none;
+}
+
+button.close {
+	font-size: 18px;
+}
+
+button.close:focus {
+	outline: none;
+}
+
+#stylewrapper{
+	display: inline-block;
+	cursor: pointer;
+}
+
+#userimgdropdown {
+	display: none;
+	position: absolute;
+	background-color: white;
+	border-radius: 5px;	
+	height: 110px;
+	cursor: default;
+	box-shadow: 0.01px 0.01px 14px;
+}
+
+.userimgopt {
+	display: block;
+	color: black;
+}
+
+#userimgdropdown .userimgopt:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#stylewrapper:hover #userimgdropdown{
+	display: block;
+	align-content: center;
+}
+/*Universal Css Ends*/
+
+
+/*Desktop View Starts*/
+
+  @media only screen and (min-width:768px) {
+
+	img.navicons {
+		width: 30px;
+		height: 30px;
+		margin-left: 6px;
+	}
+
+	#notificationbellcontainer{
+		display: none;
+	}
+
+}
+
+/*Desktop View Ends*/
+@media only screen and (max-width: 1247px) {
+	p#navname {
+		display: none;
+	}
+}
+/*Mobile View Starts*/
+
+@media only screen and (max-width: 768px) {
+
+	.navbar-brand {
+		margin-right: 4px;
+	}
+
+	#searchfield {
+		width: 46vw;
+		display: inline;
+		margin-left: -4vw;
+	}
+
+	img.navicons {
+		margin: -5px;
+		width: 33px;
+		height: 33px;
+		margin-left: 0px;
+	}
+
+	#bellicon {
+		margin-top: 3px;
+	}
+
+	#togglerbutton {
+		float: right;
+		padding: 0;
+		border: none;
+	}
+
+	#togglerbutton:focus {
+		outline: none !important;
+	}
+
+	#notifbell {
+		display: inline-block;
+		float: right;
+	}
+
+	.navbar-brand {
+		top: 1vw;
+		font-size: 23px;
+	}
+
+	#authorname{
+		font-size: 5.5vw;
+	}
+
+	#authorimage{
+		width: 8vw;
+	}
+
+	/*-----NOTIFICATION CSS-----*/
+
+	.notification-body {
+		padding: 0.8vw;
+		font-size: 3vw;
+	}
+
+	.notification-title {
+		font-size: 3.2vw;
+	}
+
+	.notification-list,
+	.n-user-list {
+		list-style: outside none none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.notification-list>li {
+		border-bottom: 1px solid rgb(175, 164, 164);
+		margin-bottom: 0.5vw;
+		padding: 0.5vw 0;
+	}
+
+	.notification-list .cat-icon {
+		width: 3.5vw;
+		margin: 0.5vw;
+		margin-right: 0.8vw;
+	}
+
+	.notification-list .avatar {
+		width: 3vw;
+	}
+
+	.rounded {
+		border-radius: 0.25rem;
+	}
+
+	.n-user-list {
+		margin-bottom: 0.5vw;
+	}
+
+	.n-user-list:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+
+	.n-user-list li {
+		float: left;
+	}
+
+	.n-user-list li+li {
+		margin-left: 0.3vw;
+	}
+
+	.n-user-list li a,
+	.n-user-list li a:hover {
+		text-decoration: none;
+	}
+
+	.modal-body {
+		height: 250px;
+		overflow-y: scroll;
+	}
+
+	li.nav-item {
+		display: inline;
+	}
+
+	li#notification.nav-item {
+		display: inline;
+	}
+
+	/*-----NOTIFICATION CSS ENDS-----*/
+
+	/*-------ADD CONTENT BUTTON STARTS-----*/
+
+	/*-------ADD CONTENT BUTTON ENDS-----*/
+}
+
+/*Mobile View Ends*/
