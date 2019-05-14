@@ -11,7 +11,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/Login.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/login.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -64,7 +64,8 @@
                                     onblur="this.placeholder = 'Password'; document.getElementById('Pi').style.display = 'Unset';"
                                     class="theinput" id="password" required>
                                 <br><br><br>
-                                <button id="submit" onclick="return check();">Sign In</button>
+                                <button id="submit" onclick="return check();">Sign In</button><br><br>
+                                <a href="/forgotpw">Forgot Password?</a>
                             </fieldset>
                         </form>
                     </div>
@@ -84,7 +85,7 @@
             messagingSenderId: "190501518002"
         }; firebase.initializeApp(config);
 
-        function check() {
+        async function check() {
             var email = document.getElementById("email").value;
             var flag = 0;
             for (var i = 0; i < email.length; ++i) {
@@ -103,7 +104,7 @@
 
             var password = document.getElementById('password');
 
-            firebase.auth().signInWithEmailAndPassword(email, password.value).catch(function (error) {
+            await firebase.auth().signInWithEmailAndPassword(email, password.value).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 console.log(errorMessage);

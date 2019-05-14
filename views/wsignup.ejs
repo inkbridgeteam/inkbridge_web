@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ink Bridge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/signup.css" />
     <link rel="icon" href="/Images/logo.png">
     <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 
-<body style="background-color: grey; color: white;">
+<body>
     <div class="container">
         <div class="row">
             <div class="LogoAndQuotes col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12" id="LogoAndQuotes">
@@ -65,9 +65,9 @@
                 <!-- <form class="mx-auto col-12" method="post" onsubmit="return check();" id="mainform"> -->
                 <form class="mx-auto col-12" id="mainform">
                     <center>
-                        <h2 id="createacc">Create an Account</h2>
+                        <h2 class="pt-3 pb-2" id="createacc">Create an Account</h2>
                         <button class="mb-3" onclick="location.href='/eauth'" id="eauth"><i id="mailicon"
-                                class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;Signup with e-mail</button><br>
+                                class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;Signup with e-mail</button>
                         <strong>
                             <p style="font-family: 'PT Serif', serif;">OR</p>
                         </strong>
@@ -106,33 +106,19 @@
                             onfocus="this.placeholder = ''; document.getElementById('RPai').style.display = 'none';"
                             onblur="this.placeholder = 'Re-Enter Password'; document.getElementById('RPai').style.display = 'Unset';"
                             type="password" name="confpass" placeholder="Re-Enter Password" id="password1" required=""
-                            oninput="fillcheck();"><br>
-                        <button id="next" value="Next" onclick="showafter();alterflag();" disabled />Next</button><br>
-                    </center>
-                    <div id="after" style="display: none;">
+                            oninput="fillcheck();"><br><br>
 
-                       
-                        <div class="row">
-                            <div class="offset-sm-2 offset-1 col-10" id="addhere">
+                        <div class="row" id="termsandcon">
+                            <div class="col-12">
+                                <input class="form-check-input" type="checkbox" id="terms" required="">
+                                <label class="form-check-label" for="terms" id="termstext">
+                                    <a style="color: white;" href="#" target="_blank">I agree to the Terms and
+                                        Conditions</a>
+                                </label>
                             </div>
                         </div>
-                        <center>
-                            <div class="row" id="termsandcon">
-                                <div class="col-12">
-                                    <input class="form-check-input" type="checkbox" id="terms" required="">
-                                    <label class="form-check-label" for="terms" id="termstext">
-                                        <a style="color: white;" href="#" target="_blank">I agree to the Terms and
-                                            Conditions</a>
-                                    </label>
-                                </div>
-                            </div>
-                        </center>
-                        <br><br>
-                        <center>
-                            <button id="submit" onclick="btnsubmit(event);">Submit</button><br>
-                        </center>
-                        <br>
-                    </div>
+                        <button id="next" value="Next" onclick="btnsubmit(event);" >Next</button><br>
+                    </center>
                 </form>
             </div>
         </div>
@@ -204,7 +190,7 @@
            
         }
     </script>
-    <script src="/js/main.js"></script>
+    <script src="/js/signup.js"></script>
 </body>
 
 </html>

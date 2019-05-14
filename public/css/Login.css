@@ -47,6 +47,7 @@ h1{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
     color: white;
     text-align: left;
     font-family: 'Acme', sans-serif;
@@ -64,7 +65,7 @@ h1{
 form{
     margin-top: 20px;
     width: 400px;
-    height: 450px;
+    height: 470px;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     padding-top: 0.1px;
@@ -86,6 +87,7 @@ button#submit{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
 
 button#submit:hover{
@@ -98,6 +100,8 @@ button#submit:hover{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    
 }
 
 button#submit:focus{
@@ -123,6 +127,7 @@ button#eauth{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
 
 button#eauth:hover{
@@ -135,12 +140,23 @@ button#eauth:hover{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
 
 button#eauth:focus, button#submit:focus{
     outline: 0;
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);
+}
+
+a {
+    text-decoration: none !important;
+    font-family: 'Acme', sans-serif !important;
+    font-size: 19px;
+}
+
+a:hover{
+    color: #007bff;
 }
 
 @media only screen and (max-width: 570px){

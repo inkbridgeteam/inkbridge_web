@@ -38,7 +38,7 @@ app.get('/readersignup', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.render('Login');
+  res.render('login');
 });
 
 app.get('/forgotpw', (req, res) => {
@@ -47,10 +47,6 @@ app.get('/forgotpw', (req, res) => {
 
 app.get('/home', (req, res) => {
   res.render('home');
-});
-
-app.get('/homenew', (req, res) => {
-  res.render('homenew');
 });
 
 app.get('/readersignup', (req, res) => {
@@ -69,10 +65,6 @@ app.get('/eauth', function(req, res) {
   res.render('emailauth');
 });
 
-app.get('/content2', function(req, res) {
-  res.render('content2');
-});
-
 app.get('/nextpage', function(req, res) {
   res.render('nextpage');
 });
@@ -87,14 +79,6 @@ app.get('/signup2', function(req, res) {
 
 app.get('/signup3', function(req, res) {
   res.render('signup3');
-});
-
-app.get('/content3', function(req, res) {
-  res.render('content3');
-});
-
-app.get('/nextpage2', function(req, res) {
-  res.render('nextpage2');
 });
 
 app.get('/tag', (req, res) => {
