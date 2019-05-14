@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
         integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="icon" href="/Images/logo.png">
+     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
 </head>
 <style>
     body {
@@ -142,26 +143,67 @@
                 </center>
                 <div class="mb-3 row">
                     <div class="col-12">
-                        <button class="px-4 py-1" id="next" style="float:right">Next &raquo;</button>
+                        <button class="px-4 py-1" id="next" onclick="pushDoc(event);" style="float:right">Next &raquo;</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyC0eejUPM-FAgg6dXKwOX82qtasMCRSPl4",
+            authDomain: "inkbridgemailauth.firebaseapp.com",
+            databaseURL: "https://inkbridgemailauth.firebaseio.com",
+            projectId: "inkbridgemailauth",
+            storageBucket: "",
+            messagingSenderId: "190501518002"
+        }; 
+        
+
+
+        // Firebase Config object of @PranjalAgnihotri
+        // const firebaseConfig = {
+        //     apiKey: "AIzaSyDfdaV5IGFg6g0vPc8NEJyasQhuFHtIxZk",
+        //     authDomain: "inkbridge-web.firebaseapp.com",
+        //     databaseURL: "https://inkbridge-web.firebaseio.com",
+        //     projectId: "inkbridge-web",
+        //     storageBucket: "inkbridge-web.appspot.com",
+        //     messagingSenderId: "149865936726",
+        //     appId: "1:149865936726:web:d93e33c9e2cecf31"
+        // };
+
+
+        firebase.initializeApp(firebaseConfig);
+
+        let genres = [];
         function changer(id){
             
             var button = document.getElementById(id);
 
             if(button.style.backgroundColor == 'white'){
+                //Remove in genres
+                genres = genres.filter(function(genre) {
+                    return (genre !== button.id);
+                });
+
                 button.style.backgroundColor = 'transparent';
                 button.style.color = 'white';
-            }
-
-            else{
+            } else {
+                //add in genres
+                genres.push(button.id);
                 button.style.backgroundColor = 'white';
                 button.style.color = 'black';
             }
+        }
+
+        async function pushDoc(event) {
+            event.preventDefault();
+            const  dbRefObj = await firebase.database().ref();
+            const  userRef = await dbRefObj.child('UsersDetails');
+            const userObj = JSON.parse(localStorage.getItem('storeObj'));
+            userObj.genre = genres;
+            const  result = await userRef.push(userObj);
+            console.log('Pushed!!!! :)')
         }
     </script>
 </body>

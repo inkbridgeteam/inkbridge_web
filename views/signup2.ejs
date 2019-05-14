@@ -167,23 +167,35 @@
                 </center>
                 <div class="mb-3 row">
                     <div class="col-12">
-                        <button onclick="location.href='/signup3'" class="px-4 py-1" id="next" style="float:right">Next &raquo;</button>
+                        <button onclick="updateDoc(event);" class="px-4 py-1" id="next" style="float:right">Next &raquo;</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
+
+        let languages = [];
         function changer(id){
             
             var button = document.getElementById(id);
 
             if(button.style.backgroundColor == 'white'){
+                // Remove in languages
+
+                languages = languages.filter(function(lang) {
+                    return (lang !== button.id);
+                });
                 button.style.backgroundColor = 'transparent';
                 button.style.color = 'white';
+                console.log(languages);
+
             }
 
             else{
+                //Add in languages
+                languages.push(button.id);
+                console.log(languages);
                 button.style.backgroundColor = 'white';
                 button.style.color = 'black';
             }
@@ -205,6 +217,14 @@
                     international[i].style.display = 'inline';
                 }
             }
+        }
+
+           function updateDoc(event) {
+            event.preventDefault();
+            const userObj = JSON.parse(localStorage.getItem('storeObj'));
+            userObj.languages = languages;
+            localStorage.setItem('storeObj', JSON.stringify(userObj));
+            window.location.href = '/signup3';
         }
     </script>
 </body>

@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const Tag = require('./models/TagSchema');
 const compression = require('compression');
 
 //Middlewares setup
@@ -20,12 +18,6 @@ app.use(
     resave: false,
     saveUninitialized: false
   })
-);
-mongoose.connect(
-  'mongodb://InkBridge:iSXvGThVEsF9BgS@ds113136.mlab.com:13136/anmol',
-  {
-    useNewUrlParser: true
-  }
 );
 
 function escapeRegex(text) {
@@ -103,10 +95,6 @@ app.get('/content3', function(req, res) {
 
 app.get('/nextpage2', function(req, res) {
   res.render('nextpage2');
-});
-
-app.get("/homenew1", function(req, res){
-  res.render('homenew1');
 });
 
 app.get('/tag', (req, res) => {
