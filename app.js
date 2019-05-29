@@ -69,6 +69,10 @@ app.get('/nextpage', function(req, res) {
   res.render('nextpage');
 });
 
+app.get('/nextpage1', function(req, res) {
+  res.render('nextpage1');
+});
+
 app.get('/signup1', function(req, res) {
   res.render('signup1');
 });
