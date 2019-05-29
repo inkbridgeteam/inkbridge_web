@@ -31,7 +31,7 @@
             padding: 0;
         }
 
-        .swiper-container {
+        .swiper-container{
             width: 500px;
             height: 500px;
         }
@@ -97,19 +97,19 @@
             display: none;
         }
 
-        .templates { 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        .templates {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-5" id="fonts-container">
+            <div class="col-3" id="fonts-container">
                 <center>
                     <button onclick="document.getElementById('font-applier').style.fontFamily = 'Lobster, cursive'; "
                         style="font-family: 'Lobster', cursive;" class="font-options">
@@ -177,47 +177,70 @@
                     </button><br>
                 </center>
             </div>
-            <div class="col-7" id="font-applier">
+            <div class="col-6" id="font-applier">
                 <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div style="background-image: url('/Images/Templates/T1.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T2.png')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T3.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T4.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T5.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T6.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T7.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T8.jpg')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T9.png')" class="swiper-slide templates"></div>
-                        <div style="background-image: url('/Images/Templates/T10.jpg')" class="swiper-slide templates"></div>
+                <div class="col-11 swiper-container">
+                    <div class="swiper-wrapper" id="content">
+                        <div style="background-image: url('/Images/Templates/T1.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T2.png')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T3.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T4.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T5.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T6.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T7.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T8.jpg')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T9.png')" class="swiper-slide templates">
+                        </div>
+                        <div style="background-image: url('/Images/Templates/T10.jpg')" class="swiper-slide templates">
+                        </div>
                     </div>
                     <div class="swiper-scrollbar"></div>
                 </div>
                 <div class="swiper-button-next swiper-button-white"></div>
             </div>
         </div>
-        <button style="float: right; border-radius: 0px;" class="btn btn-dark mt-4">Submit</button>
+        <button onclick="getScreenshot();" style="float: right; border-radius: 0px;"
+            class="btn btn-dark mt-4" id="submit">Submit</button>
+        <div style="height: 500px; width: 500px; padding: 0px; margin: 0px; border: 0px;" id="box">
+
+        </div>
     </div>
     <script>
-            var data = localStorage.getItem('data1');
-            var templates = document.getElementsByClassName('templates');
+        var data = localStorage.getItem('data1');
+        var templates = document.getElementsByClassName('templates');
 
-            for(var i=0; i<templates.length; ++i) {
-                templates[i].innerHTML = data;
+        for (var i = 0; i < templates.length; ++i) {
+            templates[i].innerHTML = data;
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             }
-
-            var swiper = new Swiper('.swiper-container', {
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    hide: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
+        });
+    </script>
+    <script src="/js/html2canvas.min.js"></script>
+    <script>
+        function getScreenshot() {
+            html2canvas(document.getElementById('content')).then(function (canvas) {
+                document.getElementById('box').innerHTML = "";
+                document.getElementById('box').appendChild(canvas);
             });
-        </script>
+        }
+    </script>
 </body>
 
 </html>
