@@ -12,16 +12,13 @@
     <link
         href="https://fonts.googleapis.com/css?family=Concert+One|Cormorant+Garamond|Dancing+Script|Fredericka+the+Great|Josefin+Slab|Kaushan+Script|Knewave|Lobster|News+Cycle|Oleo+Script|Patrick+Hand|Permanent+Marker|Special+Elite|Vidaloka"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="icon" href="/Images/logo.png">
     <title>nextpage1</title>
 
     <style>
         html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-
         body {
             background: gray;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -29,19 +26,17 @@
             color: #000;
             margin: 0;
             padding: 0;
-        }
-
-        .swiper-container{
-            width: 500px;
-            height: 500px;
+            position: relative;
+            height: 100%;
         }
 
         .swiper-slide {
             font-size: 18px;
             background: #fff;
+            margin: 0px;
             /* Center slide text vertically
-             text-align: center;
-             display: -webkit-box;
+            text-align: center;
+            display: -webkit-box;
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
@@ -56,11 +51,12 @@
         }
 
         .font-options {
+            text-align: center;
             color: white;
             border-style: solid;
             border-width: 1px;
             border-color: white;
-            width: 250px;
+            width: unset;
             padding-top: 8px;
             padding-right: 15px;
             padding-left: 15px;
@@ -86,11 +82,9 @@
         }
 
         div#fonts-container {
-            position: relative;
+            padding: 0px;
             height: 500px;
-            width: 200px;
             overflow: auto;
-            margin: 0px auto;
         }
 
         ::-webkit-scrollbar {
@@ -103,119 +97,225 @@
             -o-background-size: cover;
             background-size: cover;
         }
+
+        button {
+            cursor: pointer !important;
+        }
+
+        button:focus {
+            box-shadow: none !important;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-3" id="fonts-container">
-                <center>
-                    <button onclick="document.getElementById('font-applier').style.fontFamily = 'Lobster, cursive'; "
-                        style="font-family: 'Lobster', cursive;" class="font-options">
-                        Lobster
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Dancing Script, cursive'; "
-                        style="font-family: 'Dancing Script', cursive;" class="mt-3 font-options">
-                        Dancing Script
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Cormorant Garamond, serif'; "
-                        style="font-family: 'Cormorant Garamond', serif;" class="mt-3 font-options">
-                        Cormorant Garamond
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Special Elite, cursive'; "
-                        style="font-family: 'Special Elite', cursive;" class="mt-3 font-options">
-                        Special Elite
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'News Cycle, sans-serif'; "
-                        style="font-family: 'News Cycle', sans-serif;" class="mt-3 font-options">
-                        News Cycle
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Kaushan Script, cursive'; "
-                        style="font-family: 'Kaushan Script', cursive;" class="mt-3 font-options">
-                        Kaushan Script
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Patrick Hand, cursive'; "
-                        style="font-family: 'Patrick Hand', cursive;" class="mt-3 font-options">
-                        Patrick Hand
-                    </button><br>
-                    <button onclick="document.getElementById('font-applier').style.fontFamily = 'Josefin Slab, serif'; "
-                        style="font-family: 'Josefin Slab', serif;" class="mt-3 font-options">
-                        Josefin Slab
-                    </button><br>
-                    <button onclick="document.getElementById('font-applier').style.fontFamily = 'Vidaloka, serif'; "
-                        style="font-family: 'Vidaloka', serif;" class="mt-3 font-options">
-                        Vidaloka
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Permanent Marker, cursive'; "
-                        style="font-family: 'Permanent Marker', cursive;" class="mt-3 font-options">
-                        Permanent Marker
-                    </button><br>
-                    <button style="font-family: 'Concert One', cursive;" class="mt-3 font-options">
-                        Concert One
-                    </button><br>
-                    <button onclick="document.getElementById('font-applier').style.fontFamily = 'Knewave, cursive'; "
-                        style="font-family: 'Knewave', cursive;" class="mt-3 font-options">
-                        Knewave
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Oleo Script, cursive'; "
-                        style="font-family: 'Oleo Script', cursive;" class="mt-3 font-options">
-                        Oleo Script
-                    </button><br>
-                    <button
-                        onclick="document.getElementById('font-applier').style.fontFamily = 'Fredericka the Great, cursive'; "
-                        style="font-family: 'Fredericka the Great', cursive;" class="mt-3 font-options">
-                        Fredericka the Great
-                    </button><br>
-                </center>
+        <div class="row no-gutters">
+            <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-3 d-none d-md-block" id="fonts-container">
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Lobster, cursive'; "
+                    style="font-family: 'Lobster', cursive;" class="font-options">
+                    Lobster
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Dancing Script, cursive'; "
+                    style="font-family: 'Dancing Script', cursive;" class="mt-3 font-options">
+                    Dancing Script
+                </button><br>
+                <button
+                    onclick="document.getElementById('font-applier').style.fontFamily = 'Cormorant Garamond, serif'; "
+                    style="font-family: 'Cormorant Garamond', serif;" class="mt-3 font-options">
+                    Cormorant Garamond
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Special Elite, cursive'; "
+                    style="font-family: 'Special Elite', cursive;" class="mt-3 font-options">
+                    Special Elite
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'News Cycle, sans-serif'; "
+                    style="font-family: 'News Cycle', sans-serif;" class="mt-3 font-options">
+                    News Cycle
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Kaushan Script, cursive'; "
+                    style="font-family: 'Kaushan Script', cursive;" class="mt-3 font-options">
+                    Kaushan Script
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Patrick Hand, cursive'; "
+                    style="font-family: 'Patrick Hand', cursive;" class="mt-3 font-options">
+                    Patrick Hand
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Josefin Slab, serif'; "
+                    style="font-family: 'Josefin Slab', serif;" class="mt-3 font-options">
+                    Josefin Slab
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Vidaloka, serif'; "
+                    style="font-family: 'Vidaloka', serif;" class="mt-3 font-options">
+                    Vidaloka
+                </button><br>
+                <button
+                    onclick="document.getElementById('font-applier').style.fontFamily = 'Permanent Marker, cursive'; "
+                    style="font-family: 'Permanent Marker', cursive;" class="mt-3 font-options">
+                    Permanent Marker
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Concert One, cursive'; "
+                    style="font-family: 'Concert One', cursive;" class="mt-3 font-options">
+                    Concert One
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Knewave, cursive'; "
+                    style="font-family: 'Knewave', cursive;" class="mt-3 font-options">
+                    Knewave
+                </button><br>
+                <button onclick="document.getElementById('font-applier').style.fontFamily = 'Oleo Script, cursive'; "
+                    style="font-family: 'Oleo Script', cursive;" class="mt-3 font-options">
+                    Oleo Script
+                </button><br>
+                <button
+                    onclick="document.getElementById('font-applier').style.fontFamily = 'Fredericka the Great, cursive'; "
+                    style="font-family: 'Fredericka the Great', cursive;" class="mt-3 font-options">
+                    Fredericka the Great
+                </button><br>
             </div>
-            <div class="col-6" id="font-applier">
-                <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="col-11 swiper-container">
-                    <div class="swiper-wrapper" id="content">
-                        <div style="background-image: url('/Images/Templates/T1.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T2.png')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T3.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T4.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T5.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T6.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T7.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T8.jpg')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T9.png')" class="swiper-slide templates">
-                        </div>
-                        <div style="background-image: url('/Images/Templates/T10.jpg')" class="swiper-slide templates">
-                        </div>
+            <div class="offset-xl-2 offset-lg-2 offset-md-1 col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12">
+                <div class="d-md-none d-block row">
+                    <button style="border-radius: 0px;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-font"></i>&nbsp;
+                        Fonts 
+                    </button>
+
+                    <div class="dropdown-menu" style="height: 210px; overflow-x: hidden"
+                        aria-labelledby="dropdownMenuButton">
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Lobster, cursive'; "
+                            style="font-family: 'Lobster', cursive;" class="dropdown-item"
+                            type="button">Lobster</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Dancing Script, cursive'; "
+                            style="font-family: 'Dancing Script', cursive;" class="dropdown-item" type="button">Dancing
+                            Script</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Cormorant Garamond, serif'; "
+                            style="font-family: 'Cormorant Garamond', serif;" class="dropdown-item"
+                            type="button">Cormorant Garamond</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Special Elite, cursive'; "
+                            style="font-family: 'Special Elite', cursive;" class="dropdown-item" type="button">Special
+                            Elite</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'News Cycle, sans-serif'; "
+                            style="font-family: 'News Cycle', sans-serif;" class="dropdown-item" type="button">News
+                            Cycle</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Kaushan Script, cursive'; "
+                            style="font-family: 'Kaushan Script', cursive;" class="dropdown-item" type="button">Kaushan
+                            Script</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Patrick Hand, cursive'; "
+                            style="font-family: 'Patrick Hand', cursive;" class="dropdown-item" type="button">Patrick
+                            hand</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Josefin Slab, serif'; "
+                            style="font-family: 'Josefin Slab', serif;" class="dropdown-item" type="button">Josefin
+                            Slab</button>
+
+                        <button onclick="document.getElementById('font-applier').style.fontFamily = 'Vidaloka, serif'; "
+                            style="font-family: 'Vidaloka', serif;" class="dropdown-item"
+                            type="button">Vidaloka</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Permanent Marker, cursive'; "
+                            style="font-family: 'Permanent Marker', cursive;" class="dropdown-item"
+                            type="button">Permanent Marker</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Concert One, cursive'; "
+                            style="font-family: 'Concert One', cursive;" class="dropdown-item" type="button">Concert
+                            One</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Knewave, cursive'; "
+                            style="font-family: 'Knewave', cursive;" class="dropdown-item"
+                            type="button">Knewave</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Oleo Script, cursive'; "
+                            style="font-family: 'Oleo Script', cursive;" class="dropdown-item" type="button">Oleo
+                            Script</button>
+
+                        <button
+                            onclick="document.getElementById('font-applier').style.fontFamily = 'Fredericka the Great, cursive'; "
+                            style="font-family: 'Fredericka the Great', cursive;" class="dropdown-item"
+                            type="button">Fredericka the Great</button>
                     </div>
-                    <div class="swiper-scrollbar"></div>
+                    <button onclick="document.getElementById('font-applier').style.color = 'white' " class="ml-2 mr-5 btn btn-light" style="background-color:white; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
+                    <button onclick="document.getElementById('font-applier').style.color = 'black' " class="btn btn-light" style="background-color:black; border-color: black; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
                 </div>
-                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="row">
+                    <div class="d-none d-md-block swiper-button-prev swiper-button-white"></div>
+                    <div class="col-xl-10 col-lg-10 col-md-11 d-xl-block swiper-container" id="font-applier">
+                        <div class="swiper-wrapper" id="content">
+                            <div style="background-image: url('/Images/Templates/T1.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T2.png')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T3.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T4.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T5.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T6.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T7.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T8.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T9.png')"
+                                class="swiper-slide templates">
+                            </div>
+                            <div style="background-image: url('/Images/Templates/T10.jpg')"
+                                class="swiper-slide templates">
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="d-none d-md-block swiper-button-next swiper-button-white"></div>
+                </div>
             </div>
         </div>
-        <button onclick="getScreenshot();" style="float: right; border-radius: 0px;"
-            class="btn btn-dark mt-4" id="submit">Submit</button>
+        <button onclick="getScreenshot();" style="float: right; border-radius: 0px;" class="btn btn-dark mt-4"
+            id="submit">Submit</button>
 
         <!-- Test div -->
         <div style="height: 500px; width: 500px; padding: 0px; margin: 0px; border: 0px;" id="box">
 
         </div>
-        
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
     <script>
         var data = localStorage.getItem('data1');
         var templates = document.getElementsByClassName('templates');
@@ -234,6 +334,20 @@
                 prevEl: '.swiper-button-prev',
             }
         });
+
+        /* To make the width of the content div equal to its height */
+        var contentBox = document.getElementById('content');
+        contentBox.style.height = contentBox.offsetWidth + 'px';
+
+        /* To make the height of the fonts container equal to the height of the content box */
+        document.getElementById('fonts-container').style.height = contentBox.offsetWidth + 'px';
+
+        /* To make the width of the font-options buttons equal to the parent div */
+        var fontButtons = document.getElementsByClassName('font-options');
+        for (var i = 0; i < fontButtons.length; ++i) {
+            fontButtons[i].style.width = document.getElementById('fonts-container').offsetWidth + 'px';
+        }
+
     </script>
     <script src="/js/html2canvas.min.js"></script>
     <script>
