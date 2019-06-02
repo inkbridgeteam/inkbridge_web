@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Concert+One|Cormorant+Garamond|Dancing+Script|Fredericka+the+Great|Josefin+Slab|Kaushan+Script|Knewave|Lobster|News+Cycle|Oleo+Script|Patrick+Hand|Permanent+Marker|Special+Elite|Vidaloka"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="icon" href="/Images/logo.png">
     <title>nextpage1</title>
@@ -172,14 +172,13 @@
                     Fredericka the Great
                 </button><br>
             </div>
-            <div class="offset-xl-2 offset-lg-2 offset-md-1 col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12">
+            <div class="offset-xl-2 offset-lg-2 offset-md-1 col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12">
                 <div class="d-md-none d-block row">
-                    <button style="border-radius: 0px;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button style="border-radius: 0px;" class="btn btn-secondary dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-font"></i>&nbsp;
-                        Fonts 
+                        Fonts
                     </button>
-
                     <div class="dropdown-menu" style="height: 210px; overflow-x: hidden"
                         aria-labelledby="dropdownMenuButton">
 
@@ -252,12 +251,16 @@
                             style="font-family: 'Fredericka the Great', cursive;" class="dropdown-item"
                             type="button">Fredericka the Great</button>
                     </div>
-                    <button onclick="document.getElementById('font-applier').style.color = 'white' " class="ml-2 mr-5 btn btn-light" style="background-color:white; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
-                    <button onclick="document.getElementById('font-applier').style.color = 'black' " class="btn btn-light" style="background-color:black; border-color: black; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
+                    <button onclick="document.getElementById('font-applier').style.color = 'white' "
+                        class="ml-2 mr-5 btn btn-light"
+                        style="background-color:white; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
+                    <button onclick="document.getElementById('font-applier').style.color = 'black' "
+                        class="btn btn-light"
+                        style="background-color:black; border-color: black; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
                 </div>
                 <div class="row">
                     <div class="d-none d-md-block swiper-button-prev swiper-button-white"></div>
-                    <div class="col-xl-10 col-lg-10 col-md-11 d-xl-block swiper-container" id="font-applier">
+                    <div class="col-xl-11 col-lg-10 col-md-11 d-xl-block swiper-container" id="font-applier">
                         <div class="swiper-wrapper" id="content">
                             <div style="background-image: url('/Images/Templates/T1.jpg')"
                                 class="swiper-slide templates">
@@ -315,8 +318,30 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script>
+        // Firebase Config object of @PranjalAgnihotri
+        // const config = {
+        //     apiKey: "AIzaSyDfdaV5IGFg6g0vPc8NEJyasQhuFHtIxZk",
+        //     authDomain: "inkbridge-web.firebaseapp.com",
+        //     databaseURL: "https://inkbridge-web.firebaseio.com",
+        //     projectId: "inkbridge-web",
+        //     storageBucket: "inkbridge-web.appspot.com",
+        //     messagingSenderId: "149865936726",
+        //     appId: "1:149865936726:web:d93e33c9e2cecf31"
+        // };
+
+        const config = {
+            apiKey: "AIzaSyC0eejUPM-FAgg6dXKwOX82qtasMCRSPl4",
+            authDomain: "inkbridgemailauth.firebaseapp.com",
+            databaseURL: "https://inkbridgemailauth.firebaseio.com",
+            projectId: "inkbridgemailauth",
+            storageBucket: "gs://inkbridgemailauth.appspot.com/",
+            messagingSenderId: "190501518002"
+        }; 
+        
+        firebase.initializeApp(config);
+
         var data = localStorage.getItem('data1');
         var templates = document.getElementsByClassName('templates');
 
@@ -355,6 +380,13 @@
             html2canvas(document.getElementById('content')).then(function (canvas) {
                 document.getElementById('box').innerHTML = "";
                 document.getElementById('box').appendChild(canvas);
+
+                var storageRef = firebase.storage().ref();
+                canvas.toBlob(async function (blob) {
+                    var uploadTask = storageRef.child('Content/UserImgContent.png').put(blob).then(function(snapshot) {
+                        console.log('Uploaded!')
+                    });
+                });
             });
         }
     </script>
