@@ -1,0 +1,473 @@
+<link href="https://fonts.googleapis.com/css?family=Abel|Noto+Sans+JP|Ubuntu+Condensed" rel="stylesheet">
+<style>
+    nav {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-weight: 100;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Abel', sans-serif;
+	font-weight: 800;
+}
+
+i:hover {
+	cursor: pointer;
+}
+
+img.navicons {
+	display: inline;
+}
+
+.navbar {
+	background-image: linear-gradient(rgb(44, 44, 44), white) !important;
+}
+
+#notifbell {
+	display: none;
+}
+
+#notification:hover {
+	-webkit-text-stroke-width: 2px;
+	color: #F4D03F;
+	-webkit-text-stroke-color: black;
+}
+
+.navbar-brand {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: black;
+	-webkit-text-stroke-color: black;
+	font-size: 23px;
+}
+
+#navname {
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-color: white;
+	font-size: 24px;
+}
+
+#stylewrapper{
+	display: inline-block;
+	cursor: pointer;
+}
+
+p.qnltext {
+	display: inline;
+	color: white;
+	font-size: 21px;
+}
+
+p#navname {
+	text-decoration: none;
+	text-shadow: none;
+	display: inline;
+	margin-left: 0.2px;
+	vertical-align: -webkit-baseline-middle;
+}
+
+#stylewrapper{
+	display: inline-block;
+	cursor: pointer;
+}
+
+.userimgopt {
+	display: block;
+	color: black;
+}
+
+#userimgdropdown .userimgopt:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#stylewrapper:hover #userimgdropdown{
+	display: block;
+	align-content: center;
+}
+
+#userachievements{
+	vertical-align: -webkit-baseline-middle;
+}
+
+#searchfield {
+	display: inline;
+	width: 21vw;
+	border: none;
+	border-radius: 0px;
+	margin: none;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	margin-left: 30vw;
+}
+
+#searchfield:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none;
+}
+
+#searchbutton {
+	height: 38px;
+	background-color: white;
+	border-radius: 0px;
+	margin: none;
+	outline: none;
+	border: none;
+	display: inline;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+#searchbutton:active {
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+#userimgdropdown {
+	display: none;
+	position: absolute;
+	background-color: white;
+	border-radius: 5px;	
+	height: 110px;
+	cursor: default;
+	box-shadow: 0.01px 0.01px 14px;
+}
+
+button.btn {
+	border-radius: 0px;
+}
+
+button.btn:focus {
+	box-shadow: none;
+}
+
+/*Desktop View Starts*/
+
+@media only screen and (min-width:768px) {
+
+img.navicons {
+    width: 30px;
+    height: 30px;
+    margin-left: 6px;
+}
+
+#notificationbellcontainer{
+    display: none;
+}
+
+}
+
+/*Desktop View Ends*/
+@media only screen and (max-width: 1247px) {
+p#navname {
+    display: none;
+}
+}
+
+/*Mobile View Starts*/
+
+@media only screen and (max-width: 768px) {
+
+.navbar-brand {
+    margin-right: 4px;
+}
+
+#searchfield {
+    width: 46vw;
+    display: inline;
+    margin-left: -4vw;
+}
+
+img.navicons {
+    margin: -5px;
+    width: 33px;
+    height: 33px;
+    margin-left: 0px;
+}
+
+#bellicon {
+    margin-top: 3px;
+}
+
+#togglerbutton {
+    float: right;
+    padding: 0;
+    border: none;
+}
+
+#togglerbutton:focus {
+    outline: none !important;
+}
+
+#notifbell {
+    display: inline-block;
+    float: right;
+}
+
+.navbar-brand {
+    top: 1vw;
+    font-size: 23px;
+}
+
+#authorname{
+    font-size: 5.5vw;
+}
+
+#authorimage{
+    width: 8vw;
+}
+
+/*-----NOTIFICATION CSS-----*/
+
+.notification-body {
+    padding: 0.8vw;
+    font-size: 3vw;
+}
+
+.notification-title {
+    font-size: 3.2vw;
+}
+
+.notification-list,
+.n-user-list {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.notification-list>li {
+    border-bottom: 1px solid rgb(175, 164, 164);
+    margin-bottom: 0.5vw;
+    padding: 0.5vw 0;
+}
+
+.notification-list .cat-icon {
+    width: 3.5vw;
+    margin: 0.5vw;
+    margin-right: 0.8vw;
+}
+
+.notification-list .avatar {
+    width: 3vw;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.n-user-list {
+    margin-bottom: 0.5vw;
+}
+
+.n-user-list:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.n-user-list li {
+    float: left;
+}
+
+.n-user-list li+li {
+    margin-left: 0.3vw;
+}
+
+.n-user-list li a,
+.n-user-list li a:hover {
+    text-decoration: none;
+}
+
+.modal-body {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+li.nav-item {
+    display: inline;
+}
+
+li#notification.nav-item {
+    display: inline;
+}
+
+/*-----NOTIFICATION CSS ENDS-----*/
+
+/*-------ADD CONTENT BUTTON STARTS-----*/
+
+/*-------ADD CONTENT BUTTON ENDS-----*/
+}
+
+/*Mobile View Ends*/
+</style>
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark">
+    <a class="navbar-brand" id="brand" href="#">
+      <img src="/Images/logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+    </a>
+    <form class="form-inline">
+      <input class="form-control" type="text" id="searchfield" placeholder="Search" autocomplete="off">
+      <button class="btn btn-dark" id="searchbutton" type="submit"><i class="fas fa-search"
+          style="color:black;"></i></button>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="togglerbutton">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div id="stylewrapper">
+            <img src="/Images/cardicon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            <p id="navname">Raied Razi</p>
+            <center>
+              <div class="col-3 col-sm-2 col-md-1 col-xl-1 ml-3" id="userimgdropdown">
+                <a class="my-2 userimgopt" href="/profile">Profile</a>
+                <a class="my-2 userimgopt" href="#">Settings</a>
+                <a class="my-2 userimgopt" href="#">Logout</a>
+              </div>
+            </center>
+          </div>
+          <span id="userachievements">
+              <a><img src="/Images/Quill.png" class="navicons">
+                <p class="qnltext">: 10</p>
+              </a>
+              <a><img src="/Images/Pen.png" class="navicons">
+                <p class="qnltext">: 2</p>
+              </a>
+              <a><img src="/Images/Level.png" class="navicons">
+                <p class="qnltext">: 2</p>
+              </a>
+          </span>
+          <span id="notificationbellcontainer">
+            <a class="nav-link pt-0" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" id="notifbell">
+              <img src="/Images/Bell.png" class="navicons" id="bellicon">
+              <span class="badge badge-pill badge-dark">7</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg"
+          style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
+          <div class="modal-content">
+
+            <div class="modal-header text-center">
+              <h4 class="notification-title">Notifications</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="notification-body">
+                <div class="notifications">
+                  <ul class="notification-list">
+
+
+                    <!---NOTIFICATION 1 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 2 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/hearticon.png" class="media-object cat-icon rounded-circle" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and 4 others Like your Post.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 3 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/commenticon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> commented on your
+                            post.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <!---NOTIFICATION 4 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 5 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/shareicon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> shared your post.</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">InkBridge</div>
+          </div>
+        </div>
+      </div>

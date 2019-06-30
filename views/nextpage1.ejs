@@ -17,14 +17,17 @@
     <title>nextpage1</title>
 
     <style>
-        html,
-        body {
-            background: gray;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html,
+        body {
+            background: white;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: #000;
             position: relative;
             height: 100%;
         }
@@ -51,10 +54,10 @@
 
         .font-options {
             text-align: center;
-            color: white;
+            color: black;
             border-style: solid;
             border-width: 1px;
-            border-color: white;
+            border-color: black;
             width: unset;
             padding-top: 8px;
             padding-right: 15px;
@@ -71,8 +74,8 @@
         }
 
         .font-options:hover {
-            background-color: white;
-            color: black;
+            background-color: black;
+            color: white;
             transition-duration: 0.4s;
         }
 
@@ -105,15 +108,18 @@
             box-shadow: none !important;
         }
 
-        #colorchanger, .swiper-button-prev, .swiper-button-next {
+        #colorchanger,
+        .swiper-button-prev,
+        .swiper-button-next {
             transition-delay: 2s !important;
         }
     </style>
 </head>
 
 <body>
+    <% include partials/navbar %>
     <div class="container-fluid">
-        <div class="row no-gutters">
+        <div class="row">
             <div class="offset-xl-1 col-xl-3 col-lg-3 col-md-3 d-none d-md-block" id="fonts-container">
                 <button onclick="document.getElementById('font-applier').style.fontFamily = 'Lobster, cursive'; "
                     style="font-family: 'Lobster', cursive;" class="font-options">
@@ -184,7 +190,6 @@
                     </button>
                     <div class="dropdown-menu" style="height: 210px; overflow-x: hidden"
                         aria-labelledby="dropdownMenuButton">
-
                         <button
                             onclick="document.getElementById('font-applier').style.fontFamily = 'Lobster, cursive'; "
                             style="font-family: 'Lobster', cursive;" class="dropdown-item"
@@ -254,21 +259,26 @@
                             style="font-family: 'Fredericka the Great', cursive;" class="dropdown-item"
                             type="button">Fredericka the Great</button>
                     </div>
-                    <button onclick="document.getElementById('font-applier').style.color = 'white' "
-                        class="ml-2 btn btn-light"
-                        style="background-color:white; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
-                    <button onclick="document.getElementById('font-applier').style.color = 'black' "
-                        class="btn btn-dark"
-                        style="background-color:black; border-color: black; border-radius: 0px; float: right;">&nbsp;&nbsp;&nbsp;</button>
+                    <div class="mr-1 float-right" style="display: inline">
+                        <button onclick="document.getElementById('font-applier').style.color = 'white' "
+                            class="ml-2 btn btn-light"
+                            style="background-color:white; border-radius: 0px;border: 1px solid black;">&nbsp;&nbsp;&nbsp;</button>
+
+                        <button onclick="document.getElementById('font-applier').style.color = 'black' "
+                            class="btn btn-dark"
+                            style="background-color:black; border-color: black; border-radius: 0px;">&nbsp;&nbsp;&nbsp;</button>
+
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xl-11 col-lg-10 col-md-11 d-xl-block swiper-container" id="font-applier">
-                            <div style="z-index: 2; position: absolute; right: 0; display: none;" id="colorchanger">
-                                    <button onclick="document.getElementById('font-applier').style.color = 'white' " class="btn btn-light"
-                                        style="border-radius: 0px;">&nbsp;&nbsp;</button>
-                                    <button onclick="document.getElementById('font-applier').style.color = 'black' " class="btn btn-dark"
-                                        style="border-radius: 0px;">&nbsp;&nbsp;</button>
-                                </div>
+                        <div class="mt-1 mr-1" style="z-index: 2; position: absolute; right: 0; display: none;"
+                            id="colorchanger">
+                            <button onclick="document.getElementById('font-applier').style.color = 'white' "
+                                class="btn btn-light" style="border-radius: 0px;">&nbsp;&nbsp;</button>
+                            <button onclick="document.getElementById('font-applier').style.color = 'black' "
+                                class="btn btn-dark" style="border-radius: 0px;">&nbsp;&nbsp;</button>
+                        </div>
                         <div style="display: none;" class="swiper-button-prev swiper-button-white"></div>
                         <div class="swiper-wrapper" id="content">
                             <div style="background-image: url('/Images/Templates/T1.jpg')"
@@ -308,8 +318,8 @@
                 </div>
             </div>
         </div>
-        <button onclick="getScreenshot();" style="float: right; border-radius: 0px;" class="btn btn-dark mt-4"
-            id="submit">Submit &#8811;</button>
+        <button onclick="getScreenshot();" style="border-radius: 0px; top: 100px; float: right;"
+            class="mb-5 btn btn-dark mt-4" id="submit">Submit &#8811;</button>
 
         <!-- Test div -->
         <div style="height: 500px; width: 500px; padding: 0px; margin: 0px; border: 0px;" id="box">
@@ -385,19 +395,19 @@
             fontButtons[i].style.width = document.getElementById('fonts-container').offsetWidth + 'px';
         }
 
-        /* For manipulation of display of color changing buttons and swiper buttons in PC view */   
+        /* For manipulation of display of color changing buttons and swiper buttons in PC view */
         document.querySelector('#font-applier').addEventListener("mouseover", function () {
-            if(screen.width >= 768)
+            if (screen.width >= 768)
                 document.getElementById('colorchanger').style.display = 'block';
-                document.querySelector('.swiper-button-prev').style.display = 'block';
-                document.querySelector('.swiper-button-next').style.display = 'block';
+            document.querySelector('.swiper-button-prev').style.display = 'block';
+            document.querySelector('.swiper-button-next').style.display = 'block';
         });
 
         document.querySelector('#font-applier').addEventListener("mouseout", function () {
-            if(screen.width >= 768)
+            if (screen.width >= 768)
                 document.getElementById('colorchanger').style.display = 'none';
-                document.querySelector('.swiper-button-prev').style.display = 'none';
-                document.querySelector('.swiper-button-next').style.display = 'none';
+            document.querySelector('.swiper-button-prev').style.display = 'none';
+            document.querySelector('.swiper-button-next').style.display = 'none';
         });
     </script>
     <script>
